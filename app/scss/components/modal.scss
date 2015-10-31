@@ -1,0 +1,137 @@
+//  Modal
+//------------------------------------------------------------------------------
+
+
+//  Layout ---------------------------------------------------------------------
+.modal,
+.modal-backdrop {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.modal {
+	display: none;
+	overflow: auto;
+	overflow-y: scroll;
+	text-align: center;
+	z-index: 1040;
+	font-size: 0;
+	outline: 0;
+	-webkit-overflow-scrolling: touch;
+
+    &:before {
+		content: '';
+		display: inline-block;
+		vertical-align: middle;
+		height: 100%;
+    }
+}
+
+
+.modal-backdrop {
+	background: #000;
+	transition: opacity .2s ease;
+	z-index: 1030;
+}
+
+.modal-dialog {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+    padding: 30px 0;
+    position: relative;
+    z-index: 1010;
+    width: 860px;
+}
+
+.modal-body {
+    background: #FFF;
+    box-shadow: 0 8px 30px -5px rgba(0,0,0,.5);
+}
+
+.modal-header {
+	padding: 20px 20px 15px;
+	position: relative;
+}
+
+.modal-content {
+	padding: 0 20px 15px;
+}
+
+.modal-footer {
+	border-top: 1px solid #dedede;
+	margin-top: 20px;
+	padding: 15px 20px;
+}
+
+
+
+// Elements --------------------------------------------------------------------
+.modal-title {
+	font-weight: 500;
+}
+
+.btn-modal-close {
+	background: transparent;
+	position: absolute;
+	right: 0;
+	top: 0;
+	font-size: 24px;
+	color: #000;
+	padding: 3px 12px;
+
+	&:hover{
+        opacity: .6;
+    }
+
+	&:active{
+        opacity: 1;
+    }
+}
+
+
+
+// Animation -------------------------------------------------------------------
+.modal {
+
+	&.fade .modal-dialog {
+		opacity: 0;
+		transition: opacity 0.3s ease;
+    }
+
+	&.in .modal-dialog {
+		opacity: 1;
+		transition: opacity 0.3s ease;
+    }
+}
+
+.modal-backdrop {
+
+	&.fade {
+		opacity: 0;
+		filter: alpha(opacity=0);
+    }
+
+	&.in {
+		opacity: 0.5;
+		filter: alpha(opacity=50);
+    }
+}
+
+
+// lock screen
+.modal-open {
+	overflow: hidden
+}
+
+// Measure scrollbar
+.modal-scrollbar-measure {
+	position: absolute;
+	top: -9999px;
+	width: 50px;
+	height: 50px;
+	overflow: scroll;
+}

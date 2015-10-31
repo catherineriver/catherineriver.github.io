@@ -1,0 +1,44 @@
+//  Footer
+// -----------------------------------------------------------------------------
+
+.footer-row {
+	background: #fff;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	height: $layout-offset;
+	min-width: $width-min;
+
+	.grid-layout {
+		padding: 22px 0 0;
+	}
+}
+
+.footer-copyright {
+	font-size: #{$font-size-base - 1}
+}
+
+
+
+// Nopreset copyright
+// -----------------------------------------------------------------------------
+
+.nps-block {
+	float: right;
+	font-size: #{$font-size-base - 1};
+}
+
+.nps-link {
+	text-decoration: none;
+	color: inherit;
+
+	&:hover {
+		text-decoration: none;
+		color: $link-color__hover;
+	}
+}
+
+.nps-link__name {
+	text-decoration: underline;
+}

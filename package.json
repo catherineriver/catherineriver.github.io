@@ -1,0 +1,23 @@
+{
+  "name": "houdini-tpl",
+  "description": "A template for a quick start",
+  "devDependencies": {
+    "browser-sync": "2.8.2",
+    "gulp": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-concat": "*",
+    "gulp-filter": "*",
+    "gulp-html-prettify": "*",
+    "gulp-jade": "*",
+    "gulp-minify-css": "^1.2.1",
+    "gulp-notify": "*",
+    "gulp-plumber": "^1.0.1",
+    "gulp-rename": "*",
+    "gulp-sass": "*",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-util": "*",
+    "gulp.spritesmith": "*",
+    "run-sequence": "*"
+  },
+  "private": true
+}

@@ -1,0 +1,27 @@
+// Header
+// -----------------------------------------------------------------------------
+
+.row-header {
+	background: #FFF;
+	padding: 12px 0;
+}
+
+.header-logo {
+
+}
+
+.site-logo {
+	display: block;
+	text-decoration: none;
+	color: transparent;
+	height: 20px;
+	width: 120px;
+
+	&:focus {
+		outline: none;
+	}
+}
+
+.header-nav {
+
+}

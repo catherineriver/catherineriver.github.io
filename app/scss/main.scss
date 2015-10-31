@@ -1,0 +1,37 @@
+/*! @copyright 2015 nopreset http://nopreset.ru */
+
+
+// http://sass-guidelin.es/#the-7-1-pattern
+// utils 		— глобальные миксины, функции, вспомогательные селекторы
+// base 		— глобальные стили: normalize, типографика, цвета
+// components 	— компоненты с отдельным файлом для каждого
+// layout 		— основные компоненты макета: шапка, подвал, навигация
+// pages 		— стили, специфичные для отдельных страниц
+
+
+@import
+	'utils/mixins',
+	'utils/variables',
+	'utils/_sprite';
+
+@import
+	'base/normalize',
+	'base/grid',
+	'base/basic';
+
+@import
+	'components/article',
+	'components/buttons',
+	'components/form',
+	'components/modal';
+
+@import
+	'layout/general',
+	'layout/header',
+	'layout/footer';
+
+@import
+	'pages/main-page',
+	'pages/page-404';
+
+@import 'utils/gui';

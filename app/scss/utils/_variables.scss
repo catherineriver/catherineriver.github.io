@@ -1,0 +1,45 @@
+// Variables
+// ------------------------------------------------------------------------
+
+
+// Grid property
+
+$breakpoint-small:			768px;
+$breakpoint-medium:			992px;
+$breakpoint-large:			1200px;
+$breakpoint-xs:				1400px;
+
+$grid-breakpoint-small: 	$breakpoint-small;
+$grid-breakpoint-medium: 	$breakpoint-medium;
+$grid-breakpoint-large: 	$breakpoint-large;
+$grid-breakpoint-xs: 		$breakpoint-xs;
+
+$grid-columns: 				12;
+$column-gap: 				20px;
+
+
+
+// Global styles
+
+$body-bg:                 	#fff;
+$font-color:				#383838;
+$layout-offset:         	60px;
+
+$width-min:					1000px;
+
+
+
+// Fonts
+
+$font-size-base:		    14px;
+$font-sans-serif:  			("Helvetica Neue", Helvetica, Arial, sans-serif);
+$font-serif:      			(Georgia, "Times New Roman", Times, serif);
+
+
+
+// Colors
+
+$link-color:    		    #242424;
+$link-color__hover:    		#bc0000;
+
+$brand-main:				#000;

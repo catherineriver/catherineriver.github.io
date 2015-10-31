@@ -1,0 +1,94 @@
+html {
+	position: relative;
+	min-height: 100%;
+}
+
+body {
+	background: $body-bg;
+	color: $font-color;
+	margin: 0 0 $layout-offset;
+	font: #{$font-size-base}/1.428 $font-sans-serif;
+	min-width: 1000px;
+}
+
+a {
+	text-decoration: underline;
+	color: $link-color;
+
+	&:hover {
+		text-decoration: underline;
+		color: $link-color__hover;
+	}
+}
+
+
+
+
+//  Layout
+//	----------------------------------------------------------------------------
+.page-layout {
+	position: relative;
+	padding: 32px 0 42px;
+}
+
+.row {
+	position: relative;
+}
+
+.container{
+	position: relative;
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding: 0 20px;
+	width: 1000px;
+
+	@include min-screen($breakpoint-large) {
+		width: $breakpoint-large;
+	}
+}
+
+
+
+//  Navigation
+// -----------------------------------------------------------------------------
+
+.menu-primary {
+	font-size: 0;
+
+	&__item {
+		display: inline-block;
+		margin: 0 14px;
+		font-size: 14px;
+
+		&:first-child {
+			margin-left: 0;
+		}
+		
+		
+		&.active {
+			
+			a {
+				text-decoration: none;
+				cursor: default;
+				color: inherit;				
+			}		
+		}
+	}
+	
+	a {
+		display: block;
+	}
+}
+
+.menu-secondary {
+
+	&__item{
+
+	}
+}
+
+
+
+
+//  Sections
+// -----------------------------------------------------------------------------

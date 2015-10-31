@@ -1,0 +1,88 @@
+
+// Grid
+// ----------------------------------------------------
+
+@mixin breakpoint($min: false, $max: false) {
+	$query: "";
+
+	@if $min == false {
+		$query: "(max-width: #{$max})";
+	}
+
+	@else if $max == false {
+		$query: "(min-width: #{$min})";
+	}
+
+	@else {
+		$query: "(min-width: #{$min}) and (max-width: #{$max})";
+	}
+
+	@media #{$query} {
+		@content;
+	}
+}
+
+
+@mixin generate-colmn($i) {
+	@if $i == 0 {
+		display: none;
+	}
+	@else {
+		@extend .col;
+		width: 100% / $grid-columns * $i;
+	}
+}
+
+@mixin generate-grid-breakpoint($name: "") {
+
+	@for $i from 0 through $grid-columns {
+		@if $name == "" {
+			&-#{$i} {
+				@include generate-colmn($i);
+			}
+		}
+		@else {
+			&-#{$name}-#{$i} {
+				@include generate-colmn($i);
+			}
+		}
+	}
+
+}
+
+
+.col{
+	padding-left: ($column-gap / 2);
+	padding-right: ($column-gap / 2);
+	min-height: 1px;
+	display: inline-block;
+	vertical-align: top;
+	box-sizing: border-box;
+
+	@include generate-grid-breakpoint();
+
+	@include breakpoint($grid-breakpoint-small) {
+		@include generate-grid-breakpoint('sm')
+	}
+
+	@include breakpoint($grid-breakpoint-medium) {
+		@include generate-grid-breakpoint('md')
+	}
+
+	@include breakpoint($grid-breakpoint-large) {
+		@include generate-grid-breakpoint('lg')
+	}
+
+	@include breakpoint($grid-breakpoint-xs) {
+		@include generate-grid-breakpoint('xs')
+	}
+}
+
+.grid-layout{
+	font-size: 0;
+	margin: 0 (-$column-gap / 2);
+}
+
+.col-block{
+	display: block;
+}

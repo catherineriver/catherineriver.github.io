@@ -1,0 +1,25 @@
+// GUI Page
+// ------------------------------------------------------------------------------
+
+
+
+// Blocks
+// -----------------------------
+.gui-panel{
+	padding: 0 0 12px;
+	border-bottom: 1px solid #d3d3d3;
+	margin-bottom: 42px;
+}
+
+.gui-component{
+	margin-bottom: 32px;
+}
+
+
+
+// Helpers
+// ----------------------------
+.gui-grid--block{
+	display: block;
+	padding: 0;
+}

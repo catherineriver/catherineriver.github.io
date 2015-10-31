@@ -1,0 +1,189 @@
+// Article
+// -----------------------------------------------------------------------------
+
+
+// Basic article ---------------------------------------------------------------
+
+.article-layout {
+	font: 300 16/30px $font-sans-serif;
+}
+
+.article-body {
+
+	p {
+		font-size: inherit;
+		margin: 0.8em 0 0 0;
+	}
+
+	ul {
+		list-style: disc outside;
+		padding: 0 0 0 20px;
+		margin-top: 1em;
+
+		li + li {
+			margin-top: 0.7em;
+		}
+	}
+
+	figure {
+		padding: 2.5em 0 1.7em;
+		margin: 0;
+
+		img {
+			margin: 0 0 0.5em;
+		}
+	}
+
+	figcaption {
+		font-style: italic;
+	}
+
+	img {
+		margin: 2.5em 0 1.7em;
+		max-width: 100%;
+	}
+
+	blockquote {
+		border-left: 4px solid #dedede;
+		padding: 0 0 0 20px;
+		margin-left: 0;
+		font-size: 21px;
+		font-weight: 300;
+		line-height: 1.48;
+	}
+
+	strong,
+	b {
+		font-weight: bolder;
+	}
+
+	h3,	h4,	h5 {
+		margin: 52px 0 0;
+		line-height: 1.25;
+
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+}
+
+
+
+// Header ----------------------------------------------------------------------
+
+.article-header {
+	margin-bottom: 18px;
+
+	&__title {
+		font-size: 28px;
+		line-height: 1.25;
+		margin-bottom: 4px;
+	}
+
+	&__date {
+		font-size: 14px;
+		font-style: italic;
+		color: #555;
+	}
+}
+
+
+// Pagination ------------------------------------------------------------------
+
+.pagination {
+	position: relative;
+}
+
+.pagination__pages {
+	font-size: 0;
+	text-align: center;
+
+	li {
+		display: inline-block;
+		font-size: 14px;
+	}
+	
+	a {
+		padding: 8px;
+	}
+	
+	span {
+		cursor: default;
+	}
+	
+	.active a {
+		cursor: default;
+		pointer-events: none;
+	}
+}
+
+.pagination__controls {
+	position: absolute;
+	left: 0;
+	right: 0;
+}
+
+.pagination__control {
+	position: absolute;
+
+	&--left {
+		left: 0;
+	}
+	&--right {
+		right: 0;
+	}
+}
+
+
+
+// Article Sibling -------------------------------------------------------------
+
+.article-siblings {
+	position: relative;
+}
+
+.article-sibling__arrow {
+	width: 40%;
+
+	a {
+
+	}
+
+	a:before {
+
+	}
+}
+
+.article-sibling__arrow-next {
+	float: right;
+	text-align: right;
+
+	&:after {
+		position: absolute;
+		content: "→";
+		left: 100%;
+	}
+}
+
+.article-sibling__arrow-prev {
+	float: left;
+
+	&:before {
+		position: absolute;
+		content: "←";
+		right: 100%;
+	}
+}
+
+// Breadcrumbs -----------------------------------------------------------------
+
+.b-breadcrumbs {
+	
+	li {
+		display: inline-block;
+	}
+
+	li:first-child {
+
+	}
+}
