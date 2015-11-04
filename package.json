@@ -1,10 +1,11 @@
 {
-  "name": "houdini-tpl",
+  "name": "goodinit-tpl",
   "description": "A template for a quick start",
   "devDependencies": {
     "browser-sync": "2.8.2",
     "gulp": "*",
     "gulp-autoprefixer": "*",
+    "gulp-bower": "0.0.10",
     "gulp-concat": "*",
     "gulp-filter": "*",
     "gulp-html-prettify": "*",
@@ -15,6 +16,7 @@
     "gulp-rename": "*",
     "gulp-sass": "*",
     "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.4.2",
     "gulp-util": "*",
     "gulp.spritesmith": "*",
     "run-sequence": "*"

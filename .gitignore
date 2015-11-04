@@ -11,6 +11,7 @@
 Thumbs.db
 
 # Folders to ignore
+bower_components
 .CVS
 .git
 .hg

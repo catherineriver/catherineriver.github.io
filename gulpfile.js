@@ -11,6 +11,7 @@ var gulp 			= require('gulp'),
 	prettify 		= require('gulp-html-prettify');
 	
 	concat 			= require('gulp-concat'),
+	uglify 			= require('gulp-uglify'),
 	rename 			= require("gulp-rename"),
 	spritesmith		= require('gulp.spritesmith'),
 	autoprefixer	= require('gulp-autoprefixer'),
@@ -69,6 +70,7 @@ gulp.task('sass', function () {
 gulp.task('js', function() {
     gulp.src(['app/js/**/*.js'])
         .pipe(concat('lib.min.js'))
+		.pipe(uglify())
         .pipe(gulp.dest('dist/tpl/js'))
 		.pipe(reload({stream:true}));
 })
