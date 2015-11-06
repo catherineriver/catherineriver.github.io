@@ -1,24 +1,31 @@
 var gulp 			= require('gulp'),
-	browsersync		= require('browser-sync');
+	browsersync		= require('browser-sync'),
 	notify 			= require("gulp-notify"),
 	plumber 		= require('gulp-plumber'),
 	
 	sass        	= require('gulp-sass'),
 	sourcemaps 		= require('gulp-sourcemaps'),
-	minifyCss 		= require('gulp-minify-css');
+	minifyCss 		= require('gulp-minify-css'),
 	
 	jade 			= require('gulp-jade'),
-	prettify 		= require('gulp-html-prettify');
+	prettify 		= require('gulp-html-prettify'),
 	
 	concat 			= require('gulp-concat'),
 	uglify 			= require('gulp-uglify'),
 	rename 			= require("gulp-rename"),
 	spritesmith		= require('gulp.spritesmith'),
 	autoprefixer	= require('gulp-autoprefixer'),
-	runSequence		= require('run-sequence');
+	runSequence		= require('run-sequence'),
 
-	var browsersList	= ['ie 8', 'last 2 versions'];
-	var reload = browsersync.reload;
+	browsersList	= ['ie 8', 'last 2 versions'],
+	reload 			= browsersync.reload;
+	
+	var configPrettify = {
+		indent_char: '\t',
+		indent_size: 1,
+		indent_inner_html: true,
+		unformatted: []
+	};
 
 
 
@@ -27,15 +34,10 @@ var gulp 			= require('gulp'),
 
 gulp.task('jade', function() {
 	return gulp.src(['./app/template/*.jade', '!./app/template/_*.jade'])
-		.pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
-		.pipe(jade({pretty: true}).on('error', notify))
+		.pipe(plumber({errorHandler: notify.onError("\n<%= error.message %>")}))
+		.pipe(jade({pretty: true}))
 
-		.pipe(prettify({
-			indent_char: '\t',
-			indent_size: 1,
-			indent_inner_html: true,
-			unformatted: []
-		}))
+		.pipe(prettify(configPrettify))
 
 		.pipe(gulp.dest('dist'))
 });
@@ -47,7 +49,7 @@ gulp.task('jade', function() {
 
 gulp.task('sass', function () {
 	gulp.src('./app/scss/main.scss')
-		.pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
+		.pipe(plumber({errorHandler: notify.onError("\n<%= error.message %>")}))
 		.pipe(sourcemaps.init())
 			.pipe(sass())
 			.pipe(autoprefixer({browsers: browsersList}))
@@ -117,3 +119,6 @@ gulp.task('default', ['jade', 'sprite', 'sass', 'js' ], function () {
 	gulp.watch("app/images/*.png", ['sprite']);
 
 });
+
+gulp.task('build', ['jade', 'sprite', 'sass', 'js' ])
+	
