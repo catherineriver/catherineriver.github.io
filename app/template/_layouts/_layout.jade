@@ -1,0 +1,15 @@
+doctype html
+html(lang='ru')
+	block vars
+	include ../_includes/_head
+	include ../_includes/_mixins
+
+
+	body(class=bodyClass)
+
+		block content
+
+		include ../_includes/_modal
+
+		if !footer
+			include ../_includes/_footer

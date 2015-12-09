@@ -1,12 +1,13 @@
 //- Basic layout
-extends _layout
+extends _layouts/_layout
 
 block vars
 	- var pageName = 'Главная страница'
+	- var className = ''
 
 block content
 
-	include includes/_header
+	include _includes/_header
 	.page-layout
 		.row
 			.container

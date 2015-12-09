@@ -8,6 +8,10 @@ var gulp 			= require('gulp'),
 	minifyCss 		= require('gulp-minify-css'),
 	
 	jade 			= require('gulp-jade'),
+	jadeInheritance = require('gulp-jade-inheritance'),
+	changed 		= require('gulp-changed'),
+	cached 			= require('gulp-cached'),
+	filter 			= require('gulp-filter'),
 	prettify 		= require('gulp-html-prettify'),
 	
 	concat 			= require('gulp-concat'),
@@ -26,6 +30,14 @@ var gulp 			= require('gulp'),
 		indent_inner_html: true,
 		unformatted: []
 	};
+	
+	var configPlumber = {
+		errorHandler: notify.onError("\n<%= error.message %>")
+	};
+	
+	var app = {
+		jade: 'app/template/'
+	};
 
 
 
@@ -33,13 +45,17 @@ var gulp 			= require('gulp'),
 // ---------------------------------------------------------------------------------
 
 gulp.task('jade', function() {
-	return gulp.src(['./app/template/*.jade', '!./app/template/_*.jade'])
-		.pipe(plumber({errorHandler: notify.onError("\n<%= error.message %>")}))
-		.pipe(jade({pretty: true}))
-
-		.pipe(prettify(configPrettify))
-
-		.pipe(gulp.dest('dist'))
+	return gulp.src([app.jade + '/**/*.jade'])
+	.pipe(plumber(configPlumber))
+	.pipe(changed('dist', {extension: '.html'}))
+	.pipe(cached('jade'))
+	.pipe(jadeInheritance({basedir: 'app/template'}))
+	 .pipe(filter(function (file) {
+	            return !/\/_/.test(file.path) && !/^_/.test(file.relative);
+	        }))
+	.pipe(jade())
+	.pipe(prettify(configPrettify))
+	.pipe(gulp.dest('dist'))
 });
 
 
@@ -49,7 +65,7 @@ gulp.task('jade', function() {
 
 gulp.task('sass', function () {
 	gulp.src('./app/scss/main.scss')
-		.pipe(plumber({errorHandler: notify.onError("\n<%= error.message %>")}))
+		.pipe(plumber(configPlumber))
 		.pipe(sourcemaps.init())
 			.pipe(sass())
 			.pipe(autoprefixer({browsers: browsersList}))
@@ -87,7 +103,7 @@ gulp.task('sprite', function () {
 		imgName: 'images/sprite.png',
 		retinaImgName: 'images/sprite@2x.png',
 		cssName: '_sprite.scss',
-		cssTemplate: 'app/handlebarsStr.scss.handlebars',
+		cssTemplate: 'app/scss/handlebarsStr.scss.hb'
 	}))
 
 	spriteData.img
