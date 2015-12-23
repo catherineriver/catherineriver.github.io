@@ -2,9 +2,11 @@ var gulp 			= require('gulp'),
 	browsersync		= require('browser-sync'),
 	notify 			= require("gulp-notify"),
 	plumber 		= require('gulp-plumber'),
+	gutil 			= require('gulp-util'),
 	
 	sass        	= require('gulp-sass'),
 	minifyCss 		= require('gulp-minify-css'),
+	csslint 		= require('gulp-csslint'),
 	
 	jade 			= require('gulp-jade'),
 	jadeInheritance = require('gulp-jade-inheritance'),
@@ -34,8 +36,20 @@ var gulp 			= require('gulp'),
 		errorHandler: notify.onError("\n<%= error.message %>")
 	};
 	
+	var customReporter = function(file) {
+		gutil.log(gutil.colors.cyan(file.csslint.errorCount)+' errors in '+gutil.colors.magenta(file.path));
+	 
+		file.csslint.results.forEach(function(result) {
+			gutil.log(result.error.message+' on line '+result.error.line);
+		});
+	};
+	
 	var app = {
 		jade: 'app/template/'
+	};
+	
+	var dist = {
+		css: 'dist/tpl/template_styles.css'
 	};
 
 
@@ -76,6 +90,22 @@ gulp.task('sass', function () {
 		.pipe(gulp.dest('dist/tpl'))
 		.pipe(reload({stream:true}));
 })
+
+gulp.task('minifyCss', function() {
+	gulp.src(dist.css)
+		.pipe(minifyCss({
+			advanced: true,
+			restructuring: false,
+			keepBreaks: false,
+		}))
+		.pipe(gulp.dest('dist/tpl'))
+})
+
+gulp.task('csslint', function() {
+  gulp.src(dist.css)
+    .pipe(csslint('.csslintrc.json'))
+    .pipe(csslint.reporter(customReporter));
+});
 
 
 
@@ -133,5 +163,5 @@ gulp.task('default', ['jade', 'sprite', 'sass', 'js' ], function () {
 
 });
 
-gulp.task('build', ['jade', 'sprite', 'sass', 'js' ])
+gulp.task('build', ['jade', 'sprite', 'sass', 'minifyCss', 'js' ])
 	

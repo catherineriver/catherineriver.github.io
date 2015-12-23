@@ -19,8 +19,11 @@
 	text-align: center;
 	z-index: 1040;
 	font-size: 0;
-	outline: 0;
 	-webkit-overflow-scrolling: touch;
+
+	&:focus {
+		outline: 0;
+	}
 
     &:before {
 		content: '';

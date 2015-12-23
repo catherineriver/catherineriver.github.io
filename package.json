@@ -8,6 +8,7 @@
     "gulp-cached": "^1.1.0",
     "gulp-changed": "^1.3.0",
     "gulp-concat": "*",
+    "gulp-csslint": "^0.2.0",
     "gulp-filter": "^3.0.1",
     "gulp-html-prettify": "*",
     "gulp-jade": "*",

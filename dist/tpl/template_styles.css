@@ -6,7 +6,7 @@ audio,canvas,progress,video{display:inline-block;vertical-align:baseline}
 audio:not([controls]){display:none;height:0}
 [hidden],template{display:none}
 a{background-color:transparent}
-a:active,a:hover{outline:0}
+a:focus{outline:0}
 abbr[title]{border-bottom:1px dotted}
 b,optgroup,strong{font-weight:700}
 dfn{font-style:italic}
