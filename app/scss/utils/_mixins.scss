@@ -16,6 +16,11 @@
 	}
 }
 
+// to em function
+@function em($pixels, $context: $font-size-base) {
+	@return #{$pixels/$context}em;
+}
+
 
 // Media queries
 // Docs https://github.com/paranoida/sass-mediaqueries

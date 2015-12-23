@@ -7,7 +7,7 @@ body {
 	background: $body-bg;
 	color: $font-color;
 	margin: 0 0 $layout-offset;
-	font: #{$font-size-base}/1.428 $font-sans-serif;
+	font: #{$font-size-base}px/1.428 $font-sans-serif;
 	min-width: 1000px;
 }
 
@@ -63,7 +63,6 @@ a {
 		&:first-child {
 			margin-left: 0;
 		}
-		
 		
 		&.active {
 			

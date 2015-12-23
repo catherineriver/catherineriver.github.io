@@ -5,27 +5,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	font-size: 38px;
+	font-size: em(48);
 }
 
 h2 {
-	font-size: 32px;
+	font-size: em(42);
 }
 
 h3 {
-	font-size: 26px;
+	font-size: em(36);
 }
 
 h4 {
-	font-size: 20px;
+	font-size: em(30);
 }
 
 h5 {
-	font-size: 18px;
+	font-size: em(24);
 }
 
 h6 {
-	font-size: 16px;
+	font-size: em(18);
 }
 
 
@@ -67,12 +67,6 @@ q:after {
 
 .align-right {
 	text-align: right;
-}
-
-.col-middle {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
 }
 
 .pull-left {

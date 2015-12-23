@@ -163,5 +163,5 @@ gulp.task('default', ['jade', 'sprite', 'sass', 'js' ], function () {
 
 });
 
-gulp.task('build', ['jade', 'sprite', 'sass', 'minifyCss', 'js' ])
+gulp.task('build', ['jade', 'sprite', 'sass', 'js' ])
 	

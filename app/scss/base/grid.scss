@@ -47,9 +47,12 @@
 			}
 		}
 	}
-
 }
 
+.columns-root{
+	font-size: 0;
+	margin: 0 (-$column-gap / 2);
+}
 
 .col{
 	padding-left: ($column-gap / 2);
@@ -78,11 +81,12 @@
 	}
 }
 
-.grid-layout{
-	font-size: 0;
-	margin: 0 (-$column-gap / 2);
+.col-block {
+	display: block;
 }
 
-.col-block{
+.col-centered {
 	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
