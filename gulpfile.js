@@ -4,7 +4,6 @@ var gulp 			= require('gulp'),
 	plumber 		= require('gulp-plumber'),
 	
 	sass        	= require('gulp-sass'),
-	sourcemaps 		= require('gulp-sourcemaps'),
 	minifyCss 		= require('gulp-minify-css'),
 	
 	jade 			= require('gulp-jade'),
@@ -66,7 +65,6 @@ gulp.task('jade', function() {
 gulp.task('sass', function () {
 	gulp.src('./app/scss/main.scss')
 		.pipe(plumber(configPlumber))
-		.pipe(sourcemaps.init())
 			.pipe(sass())
 			.pipe(autoprefixer({browsers: browsersList}))
 			.pipe(minifyCss({
@@ -75,7 +73,6 @@ gulp.task('sass', function () {
 				keepBreaks: true,
 			}))
 			.pipe(rename('template_styles.css'))
-		.pipe(sourcemaps.write('.'))
 		.pipe(gulp.dest('dist/tpl'))
 		.pipe(reload({stream:true}));
 })
