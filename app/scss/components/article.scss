@@ -76,13 +76,13 @@
 	margin-bottom: 18px;
 
 	&__title {
-		font-size: 28px;
+		font-size: em(42);
 		line-height: 1.25;
 		margin-bottom: 4px;
 	}
 
 	&__date {
-		font-size: 14px;
+		font-size: em(14);
 		font-style: italic;
 		color: #555;
 	}
@@ -130,6 +130,7 @@
 	&--left {
 		left: 0;
 	}
+	
 	&--right {
 		right: 0;
 	}
@@ -139,37 +140,37 @@
 
 // Article Sibling -------------------------------------------------------------
 
-.article-siblings {
+.content-siblings {
 	position: relative;
 }
 
-.article-sibling__arrow {
+.content-sibling__arrow {
 	width: 40%;
 
 	a {
 
 	}
 
-	a:before {
+	a::before {
 
 	}
 }
 
-.article-sibling__arrow-next {
+.content-sibling__arrow-next {
 	float: right;
 	text-align: right;
 
-	&:after {
+	&::after {
 		position: absolute;
 		content: "→";
 		left: 100%;
 	}
 }
 
-.article-sibling__arrow-prev {
+.content-sibling__arrow-prev {
 	float: left;
 
-	&:before {
+	&::before {
 		position: absolute;
 		content: "←";
 		right: 100%;
@@ -178,7 +179,7 @@
 
 // Breadcrumbs -----------------------------------------------------------------
 
-.b-breadcrumbs {
+.breadcrumbs {
 	
 	li {
 		display: inline-block;

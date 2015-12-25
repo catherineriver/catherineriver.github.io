@@ -151,8 +151,8 @@ button::-moz-focus-inner,input[type=button]::-moz-focus-inner,input[type=reset]:
 .article-body h3,.article-body h4,.article-body h5{margin:52px 0 0;line-height:1.25}
 .article-body h3:first-child,.article-body h4:first-child,.article-body h5:first-child{margin-top:0}
 .article-header{margin-bottom:18px}
-.article-header__title{font-size:28px;line-height:1.25;margin-bottom:4px}
-.article-header__date{font-size:14px;font-style:italic;color:#555}
+.article-header__title{font-size:2.625em;line-height:1.25;margin-bottom:4px}
+.article-header__date{font-size:.875em;font-style:italic;color:#555}
 .pagination{position:relative}
 .pagination__pages{font-size:0;text-align:center}
 .pagination__pages li{display:inline-block;font-size:14px}
