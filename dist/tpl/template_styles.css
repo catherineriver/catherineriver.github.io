@@ -109,7 +109,7 @@ td,th{padding:0}
 }
 .col-block{display:block}
 .col-centered{display:block;margin-left:auto;margin-right:auto}
-h1,h2,h3,h4,h5,h6{margin:0 0 .5em}
+h1,h2,h3,h4,h5,h6{margin:0 0 .75em;line-height:1.1}
 h1{font-size:3em}
 h2{font-size:2.625em}
 h3{font-size:2.25em}
@@ -119,7 +119,7 @@ h6{font-size:1.125em}
 em{font-style:italic}
 p{margin:0}
 blockquote,q{quotes:none}
-blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}
+blockquote::after,blockquote::before,q::after,q::before{content:'';content:none}
 .align-center{text-align:center}
 .align-left{text-align:left}
 .align-right{text-align:right}
@@ -151,7 +151,7 @@ button::-moz-focus-inner,input[type=button]::-moz-focus-inner,input[type=reset]:
 .article-body h3,.article-body h4,.article-body h5{margin:52px 0 0;line-height:1.25}
 .article-body h3:first-child,.article-body h4:first-child,.article-body h5:first-child{margin-top:0}
 .article-header{margin-bottom:18px}
-.article-header__title{font-size:2.625em;line-height:1.25;margin-bottom:4px}
+.article-header__title{font-size:2.625em;margin-bottom:4px}
 .article-header__date{font-size:.875em;font-style:italic;color:#555}
 .pagination{position:relative}
 .pagination__pages{font-size:0;text-align:center}
@@ -163,13 +163,13 @@ button::-moz-focus-inner,input[type=button]::-moz-focus-inner,input[type=reset]:
 .pagination__control{position:absolute}
 .pagination__control--left{left:0}
 .pagination__control--right{right:0}
-.article-siblings{position:relative}
-.article-sibling__arrow{width:40%}
-.article-sibling__arrow-next{float:right;text-align:right}
-.article-sibling__arrow-next:after{position:absolute;content:"→";left:100%}
-.article-sibling__arrow-prev{float:left}
-.article-sibling__arrow-prev:before{position:absolute;content:"←";right:100%}
-.b-breadcrumbs li{display:inline-block}
+.content-siblings{position:relative}
+.content-sibling__arrow{width:40%}
+.content-sibling__arrow-next{float:right;text-align:right}
+.content-sibling__arrow-next::after{position:absolute;content:"→";left:100%}
+.content-sibling__arrow-prev{float:left}
+.content-sibling__arrow-prev::before{position:absolute;content:"←";right:100%}
+.breadcrumbs li{display:inline-block}
 .btn{display:inline-block;text-align:center;cursor:pointer;border:0;padding:0;margin:0;line-height:1.42857;white-space:nowrap;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;box-sizing:border-box}
 .btn:focus{outline:inherit}
 .btn.disable:hover,.btn.disabled,.btn[disabled],.btn[disabled]:hover{pointer-events:none;box-shadow:none;cursor:default;opacity:.5}
@@ -200,11 +200,11 @@ a.btn{text-decoration:none}
 .form-field--input{text-indent:.5em}
 .form-field--textarea{padding:8px .5em;resize:none}
 .form-label--required{position:relative}
-.form-label--required:before{content:"*";position:absolute;color:#b20000;font-size:16px;top:.3em;left:-.6em}
+.form-label--required::before{content:"*";position:absolute;color:#b20000;font-size:16px;top:.3em;left:-.6em}
 .form-field__tip{display:block;padding:4px 0 0;font-size:13px;color:#737373}
 .control input{position:absolute;opacity:0;z-index:-1}
 .control-indicator{position:relative}
-.control-indicator:before{content:''}
+.control-indicator::before{content:''}
 .modal,.modal-backdrop{position:fixed;top:0;right:0;bottom:0;left:0}
 .modal{display:none;overflow:hidden;z-index:1040;font-size:0;-webkit-overflow-scrolling:touch}
 .modal:focus{outline:0}

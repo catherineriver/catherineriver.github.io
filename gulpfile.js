@@ -2,7 +2,6 @@ var gulp 			= require('gulp'),
 	browsersync		= require('browser-sync'),
 	notify 			= require("gulp-notify"),
 	plumber 		= require('gulp-plumber'),
-	gutil 			= require('gulp-util'),
 	
 	sass        	= require('gulp-sass'),
 	minifyCss 		= require('gulp-minify-css'),
@@ -91,16 +90,6 @@ gulp.task('sass', function () {
 		.pipe(reload({stream:true}));
 })
 
-gulp.task('minifyCss', function() {
-	gulp.src(dist.css)
-		.pipe(minifyCss({
-			advanced: true,
-			restructuring: false,
-			keepBreaks: false,
-		}))
-		.pipe(gulp.dest('dist/tpl'))
-})
-
 gulp.task('csslint', function() {
   gulp.src(dist.css)
     .pipe(csslint('.csslintrc.json'))
@@ -144,7 +133,7 @@ gulp.task('sprite', function () {
 // defaut task
 // ---------------------------------------------------------------------------------
 gulp.task('default', ['jade', 'sprite', 'sass', 'js' ], function () {
-
+	
 	browsersync({
 		server: {
 			baseDir: "dist",

@@ -19,4 +19,5 @@ bower_components
 .svn
 
 # Node.JS
-node_modules
+node_modules/*
+!node_modules/jade-inheritance
