@@ -215,12 +215,12 @@ a.btn{text-decoration:none}
 .modal-dialog{max-width:860px;margin:auto;z-index:1010;font-size:16px}
 @media screen and (min-height:600px){.modal-dialog{padding:30px 0}
 }
-.modal-content{background:#FFF;box-shadow:0 8px 30px -5px rgba(0,0,0,.5)}
-.modal-header{padding:20px 20px 15px;position:relative}
-.modal-body{position:relative;padding:0 20px 15px}
-.modal-footer{border-top:1px solid #dedede;margin-top:20px;padding:15px 20px}
+.modal-content{position:relative;background:#FFF;box-shadow:0 8px 30px -5px rgba(0,0,0,.5)}
+.modal-header{padding:20px 26px 15px;position:relative}
+.modal-body{position:relative;padding:0 26px 15px}
+.modal-footer{border-top:1px solid #dedede;margin-top:20px;padding:15px 26px}
 .modal-title{font-weight:500}
-.btn-modal-close{background:0 0;position:absolute;right:0;top:0;font-size:24px;color:#000;padding:3px 12px}
+.btn-modal-close{padding:3px 12px;position:absolute;top:0;right:0;z-index:12;font-size:32px;background:0 0;color:#000}
 .btn-modal-close:focus{outline:0}
 .btn-modal-close:hover{opacity:.6}
 .btn-modal-close:active{opacity:1}
@@ -230,6 +230,11 @@ a.btn{text-decoration:none}
 .modal-backdrop.in{opacity:.5}
 .modal-open{overflow:hidden}
 .modal-scrollbar-measure{position:absolute;top:-9999px;width:50px;height:50px;overflow:scroll}
+.modal-success{background:#fff;position:absolute;top:0;right:0;bottom:0;left:0;padding:42px;display:-webkit-flex;display:-ms-flexbox;display:flex;transition:display 0s linear,opacity .3s ease}
+.modal-success[hidden]{display:none;opacity:0}
+.modal-success__content{text-align:center;max-width:620px;line-height:28px;margin:auto}
+.modal-success__title{padding-bottom:42px}
+.modal-success__title .modal-title{margin-bottom:12px}
 html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;position:relative;min-height:100%}
 body{background:#fff;color:#383838;margin:0 0 60px;font:16px/1.428 "Helvetica Neue",Helvetica,Arial,sans-serif;min-width:1000px}
 a{text-decoration:none;color:#242424}

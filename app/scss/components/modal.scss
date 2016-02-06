@@ -51,24 +51,25 @@
 }
 
 .modal-content {
+	position: relative;
 	background: #FFF;
 	box-shadow: 0 8px 30px -5px rgba(0,0,0,.5);
 }
 
 .modal-header {
-	padding: 20px 20px 15px;
+	padding: 20px 26px 15px;
 	position: relative;
 }
 
 .modal-body {
 	position: relative;
-	padding: 0 20px 15px;
+	padding: 0 26px 15px;
 }
 
 .modal-footer {
 	border-top: 1px solid #dedede;
 	margin-top: 20px;
-	padding: 15px 20px;
+	padding: 15px 26px;
 }
 
 
@@ -79,13 +80,14 @@
 }
 
 .btn-modal-close {
-	background: transparent;
-	position: absolute;
-	right: 0;
-	top: 0;
-	font-size: 24px;
-	color: #000;
 	padding: 3px 12px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 12;
+	font-size: 32px;
+	background: transparent;
+	color: #000;
 	
 	&:focus {
 		outline: none;
@@ -140,4 +142,40 @@
 	width: 50px;
 	height: 50px;
 	overflow: scroll;
+}
+
+
+// Success ---------------------------------------------------------------------
+.modal-success {
+	background: #fff;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	
+	padding: 42px;
+	display: flex;
+	transition: display 0s linear,
+				opacity 300ms ease;
+	
+	&[hidden] {
+		display: none;
+		opacity: 0;
+	}
+	
+	&__content {
+		text-align: center;
+		max-width: 620px;
+		line-height: 28px;
+		margin: auto;
+	}
+	
+	&__title {
+		padding-bottom: 42px;
+		
+		.modal-title {
+			margin-bottom: 12px;
+		}
+	}
 }
