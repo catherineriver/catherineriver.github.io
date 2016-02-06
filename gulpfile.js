@@ -76,7 +76,7 @@ gulp.task('jade', function() {
 // ---------------------------------------------------------------------------------
 
 gulp.task('sass', function () {
-	gulp.src('./app/scss/main.scss')
+	return gulp.src('./app/scss/main.scss')
 		.pipe(plumber(configPlumber))
 			.pipe(sass())
 			.pipe(autoprefixer({browsers: browsersList}))
@@ -102,7 +102,7 @@ gulp.task('csslint', function() {
 // ---------------------------------------------------------------------------------
 
 gulp.task('js', function() {
-    gulp.src(['app/js/**/*.js'])
+    return gulp.src(['app/js/**/*.js'])
         .pipe(concat('lib.min.js'))
 		.pipe(uglify())
         .pipe(gulp.dest('dist/tpl/js'))
@@ -122,35 +122,47 @@ gulp.task('sprite', function () {
 		cssTemplate: 'app/scss/handlebarsStr.scss.hb'
 	}))
 
-	spriteData.img
+	return spriteData.img
 		.pipe(gulp.dest('dist/tpl'));
 
-	spriteData.css
+	return spriteData.css
 		.pipe(gulp.dest('app/scss/utils'));
 });
 
 
 // defaut task
 // ---------------------------------------------------------------------------------
-gulp.task('default', ['jade', 'sprite', 'sass', 'js' ], function () {
-	
+gulp.task('watch', function(){
 	browsersync({
 		server: {
 			baseDir: "dist",
 			directory: true
 		}
 	});
+	
+		
+})
 
+gulp.task(watch);
+
+function watch() {
 	gulp.watch(["app/scss/**/*.+(scss|sass)"], ['sass']);
-
-	gulp.watch("app/template/**/*.jade", function(){
-		runSequence('jade', reload)});
-
+	
+	gulp.watch("app/template/**/*.jade", function(){ return runSequence('jade', reload) });
+	
 	gulp.watch(["app/js/**/*.js", "dist/tpl/js/**/*.js", "!dist/tpl/js/lib.min.js"], ['js']);
-
+	
 	gulp.watch("app/images/*.png", ['sprite']);
 
-});
+}
+	
+gulp.task('default',
 
-gulp.task('build', ['jade', 'sprite', 'sass', 'js' ])
+
+	gulp.series(['sprite', 'jade', 'sass', 'js', 'watch'])
+	
+);
+
+
+//gulp.task('build', ['jade', 'sprite', 'sass', 'js' ])
 	
