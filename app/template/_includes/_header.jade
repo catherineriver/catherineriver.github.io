@@ -2,17 +2,17 @@ header.row-header
 	.container
 
 		.header-logo
-			a.site-logo(title="На главную" href="/") siteName
+			a.site-logo(title="На главную" href="/") SiteName
 
 		.header-nav
 			
 			.header-contacts
 				a(href="tel:").header-phone +7 (8452) 933-994
-				span.header-contacts__tip Перезвоните мне
+				span.header-contacts__tip(data-toggle="modal" data-target="#modal") Перезвоните мне
 
 			+nav('menu-primary',[
 				{
-				    name: 'Главная',
+				    name: 'Услуги',
 				    href: '/'
 				}, {
 					name: 'Новости',

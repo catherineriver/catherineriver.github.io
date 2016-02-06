@@ -12,11 +12,11 @@ body {
 }
 
 a {
-	text-decoration: underline;
+	text-decoration: none;
 	color: $link-color;
 
 	&:hover {
-		text-decoration: underline;
+		text-decoration: none;
 		color: $link-color__hover;
 	}
 }

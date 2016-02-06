@@ -3,7 +3,7 @@
   "description": "A template for a quick start",
   "devDependencies": {
     "browser-sync": "2.8.2",
-    "gulp": "*",
+    "gulp": "^3.9.0",
     "gulp-autoprefixer": "*",
     "gulp-cached": "^1.1.0",
     "gulp-changed": "^1.3.0",
