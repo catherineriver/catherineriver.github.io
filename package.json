@@ -3,7 +3,7 @@
   "description": "A template for a quick start",
   "devDependencies": {
     "browser-sync": "2.8.2",
-    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp": "*",
     "gulp-autoprefixer": "*",
     "gulp-cached": "^1.1.0",
     "gulp-changed": "^1.3.0",
@@ -23,8 +23,5 @@
     "gulp.spritesmith": "*",
     "run-sequence": "*"
   },
-  "private": true,
-  "scripts": {
-    "gulp": "./node_modules/.bin/gulp"
-  }
+  "private": true
 }
