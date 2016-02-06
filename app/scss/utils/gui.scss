@@ -1,6 +1,32 @@
 // GUI Page
 // ------------------------------------------------------------------------------
+.gui-header {
+	background: #f6f5f3;
+}
 
+.gui-menu {
+	display: flex;
+	font-size: 14px;
+	
+	&__item {
+		padding: 0 16px;
+		
+		&:first-child {
+			padding-left: 0;
+		}
+	}
+	
+	a {
+		display: block;
+		padding: 14px 0 10px;
+		border-bottom: 2px solid transparent;
+	}
+
+	.active a{
+		border-color: #CE5943;
+	}
+	
+}
 
 
 // Blocks
@@ -18,8 +44,6 @@
 .gui-component{
 	margin-bottom: 32px;
 }
-
-
 
 // Helpers
 // ----------------------------

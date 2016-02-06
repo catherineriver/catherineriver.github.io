@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-		<title>GUI Page</title>
+		<title>Article</title>
 		<meta name="description" content="">
 		<meta name="viewport" content="width=1024">
 		<link sizes="57x57" href="tpl/images/ico/apple-touch-icon-57x57.png" rel="apple-touch-icon">
@@ -28,48 +28,21 @@
 	</head>
 
 	<body class="page-gui">
+		<header class="gui-header">
+			<div class="container">
+				<ul class="gui-menu">
+					<li class="gui-menu__item">
+						<a href="index.html">Главная</a>
+					</li>
+					<li class="gui-menu__item active">
+						<a href="gui-article.html">Статья</a>
+					</li>
+				</ul>
+			</div>
+		</header>
 		<div class="page-layout">
 			<div class="row">
 				<div class="container">
-					<div class="gui-component">
-						<div class="gui-component__text">
-							<h3>Форма</h3>
-						</div>
-						<div class="form-layout col-9">
-							<form class="form-body">
-								<div class="form-row">
-									<div class="form-item col-3">
-										<label class="form-label">Название поля</label>
-									</div>
-									<div class="form-item col-8">
-										<input class="form-field form-field--input">
-									</div>
-								</div>
-								<div class="form-row">
-									<div class="form-item col-3">
-										<label class="form-label">Название поля</label>
-									</div>
-									<div class="form-item col-8">
-										<textarea rows="6" class="form-field form-field--textarea"></textarea>
-									</div>
-								</div>
-							</form>
-						</div>
-					</div>
-					<div class="gui-panel">
-						<h1>GUI Page</h1>
-						<button data-toggle="modal" data-target="#modal" class="btn btn-basic btn-small">Modal Toggle</button>
-					</div>
-					<div class="gui-panel">
-						<div class="gui-panel__fonts">
-							<h1>Header 1</h1>
-							<h2>Header 2</h2>
-							<h3>Header 3</h3>
-							<h4>Header 4</h4>
-							<h5>Header 5</h5>
-							<h6>Header 6</h6>
-						</div>
-					</div>
 					<div class="col-xs-9 gui-grid--block">
 						<article class="article-layout">
 							<header class="article-header">

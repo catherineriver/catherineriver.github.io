@@ -2,47 +2,18 @@
 extends ../_layouts/_layout
 
 block vars
-	- var pageName 	= 'GUI Page'
+	- var pageName 	= 'Article'
 	- var bodyClass = 'page-gui'
+	- var pageId 	= 1
 	- var dir 		= '../'
 
 
 block content
 
+	include _gui-header
 	.page-layout
 		.row
 			.container
-				.gui-component
-					.gui-component__text
-						h3 Форма
-
-					.form-layout.col-9
-						form.form-body
-							.form-row
-								.form-item.col-3
-									label.form-label Название поля
-								.form-item.col-8
-									input.form-field.form-field--input
-							.form-row
-								.form-item.col-3
-									label.form-label Название поля
-								.form-item.col-8
-									textarea.form-field.form-field--textarea(rows="6")
-
-				.gui-panel
-					h1 GUI Page
-					button.btn.btn-basic.btn-small(data-toggle="modal" data-target="#modal") Modal Toggle
-				
-				.gui-panel
-					.gui-panel__fonts
-						h1 Header 1
-						h2 Header 2
-						h3 Header 3
-						h4 Header 4
-						h5 Header 5
-						h6 Header 6
-				
-				//- Article
 				.col-xs-9.gui-grid--block
 					article.article-layout
 						header.article-header
