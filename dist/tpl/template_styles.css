@@ -207,7 +207,7 @@ a.btn{text-decoration:none}
 .control-indicator{position:relative}
 .control-indicator::before{content:''}
 .modal,.modal-backdrop{position:fixed;top:0;right:0;bottom:0;left:0}
-.modal{display:none;overflow:hidden;z-index:1040;font-size:0;-webkit-overflow-scrolling:touch}
+.modal{display:none;overflow:hidden;z-index:1040;-webkit-overflow-scrolling:touch}
 .modal:focus{outline:0}
 .modal-open .modal{display:-webkit-flex;display:-ms-flexbox;display:flex;overflow-x:hidden;overflow-y:auto}
 .no-flexbox .modal-open .modal{display:block}
