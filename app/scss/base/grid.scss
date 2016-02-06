@@ -76,7 +76,7 @@
 		@include generate-grid-breakpoint('lg')
 	}
 
-	@include breakpoint($grid-breakpoint-xs) {
+	@include breakpoint($grid-breakpoint-xlarge) {
 		@include generate-grid-breakpoint('xs')
 	}
 }

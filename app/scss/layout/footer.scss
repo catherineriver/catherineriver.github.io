@@ -8,7 +8,6 @@
 	bottom: 0;
 	right: 0;
 	height: $layout-offset;
-	min-width: $width-min;
 	border-top: 2px solid #F6F5F3;
 }
 
@@ -36,6 +35,6 @@
 
 	&:hover {
 		text-decoration: none;
-		color: $link-color__hover;
+		color: $link-color-hover;
 	}
 }

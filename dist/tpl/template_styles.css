@@ -246,7 +246,7 @@ a:hover{text-decoration:none;color:#bc0000}
 .row-header{background:#f6f5f3;padding:12px 0}
 .site-logo{display:block;text-decoration:none}
 .site-logo:focus{outline:0}
-.row-footer{background:#fff;position:absolute;left:0;bottom:0;right:0;height:60px;min-width:1000px;border-top:2px solid #F6F5F3}
+.row-footer{background:#fff;position:absolute;left:0;bottom:0;right:0;height:60px;border-top:2px solid #F6F5F3}
 .footer-panel{padding:22px 0 0}
 .footer-copyright{font-size:14px}
 .footer-developers{float:right;font-size:14px}

@@ -4,32 +4,34 @@
 
 // Grid property
 
+$breakpoint-xsmall:			544px;
 $breakpoint-small:			768px;
 $breakpoint-medium:			992px;
 $breakpoint-large:			1200px;
-$breakpoint-xs:				1400px;
+$breakpoint-xlarge:			1400px;
 
+$grid-breakpoint-xsmall: 	$breakpoint-xsmall;
 $grid-breakpoint-small: 	$breakpoint-small;
 $grid-breakpoint-medium: 	$breakpoint-medium;
 $grid-breakpoint-large: 	$breakpoint-large;
-$grid-breakpoint-xs: 		$breakpoint-xs;
+$grid-breakpoint-xlarge:	$breakpoint-xlarge;
 
 $grid-columns: 				12;
 $column-gap: 				20px;
 
 
 
-// Global styles
+// Global
+// -----------------------------------------------------------------------------
 
 $body-bg:                 	#fff;
 $font-color:				#383838;
 $layout-offset:         	60px;
 
-$width-min:					1000px;
-
 
 
 // Fonts
+// -----------------------------------------------------------------------------
 
 $font-size-base:		    16;
 $font-sans-serif:  			("Helvetica Neue", Helvetica, Arial, sans-serif);
@@ -37,9 +39,16 @@ $font-serif:      			(Georgia, "Times New Roman", Times, serif);
 
 
 
-// Colors
+// Brand colors
+// -----------------------------------------------------------------------------
+
+$brand-primary:			#000;
+$brand-secondary:		#999;
+
+
+
+// Links
+// -----------------------------------------------------------------------------
 
 $link-color:    		    #242424;
-$link-color__hover:    		#bc0000;
-
-$brand-main:				#000;
+$link-color-hover:    		#bc0000;
