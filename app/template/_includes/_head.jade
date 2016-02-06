@@ -21,17 +21,17 @@ head
 	//- fonts
 
 	//- CSS
-	link(href="tpl/template_styles.css" rel="stylesheet")
+	link(href="#{dir}tpl/template_styles.css" rel="stylesheet")
 
 	//- JS
 
-	script(src="tpl/js/vendor/modernizr.js")
+	script(src="#{dir}tpl/js/vendor/modernizr.js")
 	//- script(src="http://api-maps.yandex.ru/2.1.17/?lang=ru_RU" type="text/javascript")
 	//- script(src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js")
 
 	script.
-		window.jQuery || document.write('<script src="tpl/js/vendor/jquery-1.11.3.min.js"><\/script>')
-	script(src="tpl/js/lib.min.js")
-	script(src="tpl/js/main.js")
+		window.jQuery || document.write('<script src="#{dir}tpl/js/vendor/jquery-1.11.3.min.js"><\/script>')
+	script(src="#{dir}tpl/js/lib.min.js")
+	script(src="#{dir}tpl/js/main.js")
 
 	block head
