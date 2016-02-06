@@ -135,7 +135,6 @@ input::-moz-placeholder,textarea::-moz-placeholder{color:#949494}
 input:-ms-input-placeholder,textarea:-ms-input-placeholder{color:#949494}
 input::placeholder,textarea::placeholder{color:#949494}
 label{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
-button::-moz-focus-inner,input[type=button]::-moz-focus-inner,input[type=reset]::-moz-focus-inner,input[type=submit]::-moz-focus-inner{border:none;padding:0}
 .clearfix:after,.clearfix:before{content:'';display:table}
 .clearfix:after{clear:both}
 .article-layout{font-size:16px;line-height:30px}
@@ -227,8 +226,8 @@ a.btn{text-decoration:none}
 .btn-modal-close:active{opacity:1}
 .modal.fade .modal-dialog{opacity:0;transition:opacity .3s ease}
 .modal.in .modal-dialog{opacity:1;transition:opacity .3s ease}
-.modal-backdrop.fade{opacity:0;filter:alpha(opacity=0)}
-.modal-backdrop.in{opacity:.5;filter:alpha(opacity=50)}
+.modal-backdrop.fade{opacity:0}
+.modal-backdrop.in{opacity:.5}
 .modal-open{overflow:hidden}
 .modal-scrollbar-measure{position:absolute;top:-9999px;width:50px;height:50px;overflow:scroll}
 html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;position:relative;min-height:100%}
@@ -259,7 +258,7 @@ a:hover{text-decoration:none;color:#bc0000}
 .page-404__title{font-size:142px;line-height:1;margin-bottom:12px}
 .page-404__subtitle{font-size:20px;font-weight:300;margin-bottom:32px}
 .page-404__action{text-align:center;font-size:16px}
-.page-gui{-webkit-font-smoothing:subpixel-antialiased;-moz-osx-font-smoothing:auto}
+.page-gui{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 .gui-header{background:#f6f5f3}
 .gui-menu{display:-webkit-flex;display:-ms-flexbox;display:flex;font-size:14px}
 .gui-menu__item{padding:0 16px}

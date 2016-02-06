@@ -108,12 +108,12 @@
 
 	&.fade .modal-dialog {
 		opacity: 0;
-		transition: opacity 0.3s ease;
+		transition: opacity .3s ease;
     }
 
 	&.in .modal-dialog {
 		opacity: 1;
-		transition: opacity 0.3s ease;
+		transition: opacity .3s ease;
     }
 }
 
@@ -121,12 +121,10 @@
 
 	&.fade {
 		opacity: 0;
-		filter: alpha(opacity=0);
     }
 
 	&.in {
 		opacity: 0.5;
-		filter: alpha(opacity=50);
     }
 }
 

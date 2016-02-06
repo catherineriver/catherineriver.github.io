@@ -1,7 +1,7 @@
 // GUI Page
 // -----------------------------------------------------------------------------
 .page-gui {
-	@include font-smoothing(off);
+	@include font-smoothing;
 }
 
 .gui-header {

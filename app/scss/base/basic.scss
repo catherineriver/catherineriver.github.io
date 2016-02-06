@@ -122,16 +122,6 @@ label{
 }
 
 
-// reset firefox button
-button::-moz-focus-inner,
-input[type="reset"]::-moz-focus-inner,
-input[type="button"]::-moz-focus-inner,
-input[type="submit"]::-moz-focus-inner{
-	border: none;
-	padding: 0;
-}
-
-
 // Helpers
 .clearfix{
 	*zoom: 1;
