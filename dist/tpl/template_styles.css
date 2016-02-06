@@ -138,14 +138,16 @@ label{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-s
 button::-moz-focus-inner,input[type=button]::-moz-focus-inner,input[type=reset]::-moz-focus-inner,input[type=submit]::-moz-focus-inner{border:none;padding:0}
 .clearfix:after,.clearfix:before{content:'';display:table}
 .clearfix:after{clear:both}
-.article-layout{font-size:1em;line-height:30px}
+.article-layout{font-size:16px;line-height:30px}
 .article-body p{font-size:inherit;margin:.8em 0 0}
 .article-body ul{list-style:disc;padding:0 0 0 20px;margin-top:1em}
 .article-body ul li+li{margin-top:.7em}
+.article-body ol{list-style-type:decimal;padding:0 0 0 20px;margin-top:1em}
+.article-body ol li+li{margin-top:.7em}
 .article-body figure{padding:2.5em 0 1.7em;margin:0}
 .article-body figure img{margin:0 0 .5em}
-.article-body figcaption{font-style:italic}
-.article-body img{margin:2.5em 0 1.7em;max-width:100%}
+.article-body figcaption{font-style:italic;font-size:.85em}
+.article-body img{margin:2.5em 0 1.5em;max-width:100%}
 .article-body blockquote{border-left:4px solid #dedede;padding:0 0 0 20px;margin-left:0;font-size:21px;font-weight:300;line-height:1.48}
 .article-body b,.article-body strong{font-weight:bolder}
 .article-body h3,.article-body h4,.article-body h5{margin:52px 0 0;line-height:1.25}
@@ -154,12 +156,12 @@ button::-moz-focus-inner,input[type=button]::-moz-focus-inner,input[type=reset]:
 .article-header__title{font-size:2.625em;margin-bottom:4px}
 .article-header__date{font-size:.875em;font-style:italic;color:#555}
 .pagination{position:relative}
-.pagination__pages{font-size:0;text-align:center}
-.pagination__pages li{display:inline-block;font-size:14px}
-.pagination__pages a{padding:8px}
-.pagination__pages span{cursor:default}
-.pagination__pages .active a{cursor:default;pointer-events:none}
-.pagination__controls{position:absolute;left:0;right:0}
+.pagination__list{font-size:0;text-align:center;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+.pagination__list li{display:inline-block;font-size:16px}
+.pagination__list a{padding:.875em}
+.pagination__list span{cursor:default}
+.pagination__list .active a{cursor:default;pointer-events:none}
+.pagination__controls{position:absolute;left:0;right:0;font-size:16px}
 .pagination__control{position:absolute}
 .pagination__control--left{left:0}
 .pagination__control--right{right:0}

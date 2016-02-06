@@ -5,7 +5,7 @@
 // Basic article ---------------------------------------------------------------
 
 .article-layout {
-	font-size: 1em;
+	font-size: $font-size-root;
 	line-height: 30px;
 }
 
@@ -25,6 +25,16 @@
 			margin-top: 0.7em;
 		}
 	}
+	
+	ol {
+		list-style-type: decimal;
+		padding: 0 0 0 20px;
+		margin-top: 1em;
+
+		li + li {
+			margin-top: 0.7em;
+		}
+	}
 
 	figure {
 		padding: 2.5em 0 1.7em;
@@ -37,10 +47,11 @@
 
 	figcaption {
 		font-style: italic;
+		font-size: .85em;
 	}
 
 	img {
-		margin: 2.5em 0 1.7em;
+		margin: 2.5em 0 1.5em;
 		max-width: 100%;
 	}
 
@@ -94,17 +105,18 @@
 	position: relative;
 }
 
-.pagination__pages {
+.pagination__list {
 	font-size: 0;
 	text-align: center;
+	user-select: none;
 
 	li {
 		display: inline-block;
-		font-size: 14px;
+		font-size: $font-size-root;
 	}
 	
 	a {
-		padding: 8px;
+		padding: em(14);
 	}
 	
 	span {
@@ -121,6 +133,7 @@
 	position: absolute;
 	left: 0;
 	right: 0;
+	font-size: $font-size-root;
 }
 
 .pagination__control {
