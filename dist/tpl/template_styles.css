@@ -184,8 +184,8 @@ a.btn{text-decoration:none}
 .btn-block{box-sizing:border-box;display:block;width:100%}
 .btn-small{padding:.5em 1.6em;font-size:12px}
 .btn-normal{padding:.5em 1.6em;font-size:14px}
-.btn-medium{padding:1em 1.8em;line-height:1.33;font-size:16px}
-.btn-large{padding:1em 1.8em;line-height:1.33;font-size:20px}
+.btn-medium{padding:1em 2em;font-size:16px}
+.btn-large{padding:.85em 2.6em .87em;font-size:20px}
 .btn-group{font-size:0}
 .btn-group-right{text-align:right}
 .btn+.btn{margin-left:1em}
@@ -193,7 +193,7 @@ a.btn{text-decoration:none}
 .form-group{margin-left:-24px}
 .form-group .form-block{padding-left:24px;box-sizing:border-box}
 .form-row{margin-bottom:24px;font-size:0}
-.form-item{display:inline-block;box-sizing:border-box;vertical-align:top}
+.form-item{padding-right:0;padding-left:0}
 .form-item+.form-item{padding-left:20px}
 .form-label{display:block;cursor:pointer;padding:8px 0;font-size:15px}
 .form-field{border:1px solid #cecece;border-radius:3px;box-shadow:inset 0 1px 1px rgba(0,0,0,.2);font-size:16px;padding:8px 0;box-sizing:border-box;width:100%}
