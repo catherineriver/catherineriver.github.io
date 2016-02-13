@@ -221,6 +221,7 @@ a.btn{text-decoration:none}
 .modal-footer{border-top:1px solid #dedede;margin-top:20px;padding:15px 26px}
 .modal-title{font-weight:500}
 .btn-modal-close{padding:3px 12px;position:absolute;top:0;right:0;z-index:12;font-size:32px;background:0 0;color:#000}
+.btn-modal-close::before{content:'\00d7'}
 .btn-modal-close:focus{outline:0}
 .btn-modal-close:hover{opacity:.6}
 .btn-modal-close:active{opacity:1}

@@ -89,6 +89,10 @@
 	background: transparent;
 	color: #000;
 	
+	&::before {
+		content: '\00d7';
+	}
+	
 	&:focus {
 		outline: none;
 	}
