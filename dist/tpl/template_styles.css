@@ -189,6 +189,8 @@ a.btn{text-decoration:none}
 .btn-group{font-size:0}
 .btn-group-right{text-align:right}
 .btn+.btn{margin-left:1em}
+.link-pseudo{cursor:pointer}
+.link-pseudo:hover{color:#bc0000}
 .form-body{font-size:0}
 .form-group{margin-left:-24px}
 .form-group .form-block{padding-left:24px;box-sizing:border-box}
@@ -236,7 +238,7 @@ a.btn{text-decoration:none}
 .modal-success__content{text-align:center;max-width:620px;line-height:28px;margin:auto}
 .modal-success__title{padding-bottom:42px}
 .modal-success__title .modal-title{margin-bottom:12px}
-html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;position:relative;min-height:100%}
+html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;position:relative}
 body{background:#fff;color:#383838;margin:0;font:16px/1.428 "Helvetica Neue",Helvetica,Arial,sans-serif;min-width:1000px;min-height:100vh;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}
 a{text-decoration:none;color:#242424}
 a:hover{text-decoration:none;color:#bc0000}

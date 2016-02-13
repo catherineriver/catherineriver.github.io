@@ -110,3 +110,14 @@
 .btn + .btn {
 	margin-left: 1em;
 }
+
+
+// Link button -----------------------------------------------------------------
+
+.link-pseudo {
+	cursor: pointer;
+	
+	&:hover {
+		color: $link-color-hover;
+	}
+}
