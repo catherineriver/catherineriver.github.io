@@ -6,9 +6,13 @@ html {
 body {
 	background: $body-bg;
 	color: $font-color;
-	margin: 0 0 $layout-offset;
+	margin: 0;
 	font: #{$font-size-base}px/1.428 $font-sans-serif;
 	min-width: 1000px;
+	
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
 }
 
 a {
@@ -29,6 +33,7 @@ a {
 .page-layout {
 	position: relative;
 	padding: 32px 0 42px;
+	flex: 1 0 auto;
 }
 
 .container{

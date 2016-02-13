@@ -236,10 +236,10 @@ a.btn{text-decoration:none}
 .modal-success__title{padding-bottom:42px}
 .modal-success__title .modal-title{margin-bottom:12px}
 html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;position:relative;min-height:100%}
-body{background:#fff;color:#383838;margin:0 0 60px;font:16px/1.428 "Helvetica Neue",Helvetica,Arial,sans-serif;min-width:1000px}
+body{background:#fff;color:#383838;margin:0;font:16px/1.428 "Helvetica Neue",Helvetica,Arial,sans-serif;min-width:1000px;min-height:100vh;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}
 a{text-decoration:none;color:#242424}
 a:hover{text-decoration:none;color:#bc0000}
-.page-layout{position:relative;padding:32px 0 42px}
+.page-layout{position:relative;padding:32px 0 42px;-webkit-flex:1 0 auto;-ms-flex:1 0 auto;flex:1 0 auto}
 .container{position:relative;box-sizing:border-box;margin:0 auto;padding:0 20px;width:1000px}
 @media screen and (min-width:1200px){.container{width:1200px}
 }
@@ -248,10 +248,10 @@ a:hover{text-decoration:none;color:#bc0000}
 .menu-primary__item:first-child{margin-left:0}
 .menu-primary__item.active a{text-decoration:none;cursor:default;color:inherit}
 .menu-primary a{display:block}
-.row-header{background:#f6f5f3;padding:12px 0}
+.page-header{background:#f6f5f3;padding:12px 0}
 .site-logo{display:block;text-decoration:none}
 .site-logo:focus{outline:0}
-.row-footer{background:#fff;position:absolute;left:0;bottom:0;right:0;height:60px;border-top:2px solid #F6F5F3}
+.page-footer{background:#fff;border-top:2px solid #F6F5F3;padding-bottom:20px}
 .footer-panel{padding:22px 0 0}
 .footer-copyright{font-size:14px}
 .footer-developers{float:right;font-size:14px}
