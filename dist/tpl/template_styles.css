@@ -1,41 +1,43 @@
 @charset "UTF-8";
 /*! @copyright 2015 nopreset http://nopreset.ru */
-/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
-article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}
-audio,canvas,progress,video{display:inline-block;vertical-align:baseline}
+/*! normalize.css v4.0.0 | MIT License | github.com/necolas/normalize.css */
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}
+audio,canvas,progress,video{display:inline-block}
 audio:not([controls]){display:none;height:0}
+progress{vertical-align:baseline}
 [hidden],template{display:none}
 a{background-color:transparent}
-a:focus{outline:0}
-abbr[title]{border-bottom:1px dotted}
-b,optgroup,strong{font-weight:700}
+a:active,a:hover{outline-width:0}
+abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}
+b,strong{font-weight:bolder}
 dfn{font-style:italic}
-mark{background:#ff0;color:#000}
+mark{background-color:#ff0;color:#000}
 small{font-size:80%}
 sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
-sup{top:-.5em}
 sub{bottom:-.25em}
-img{border:0}
+sup{top:-.5em}
+img{border-style:none}
 svg:not(:root){overflow:hidden}
-figure{margin:1em 40px}
-hr{box-sizing:content-box;height:0}
-pre,textarea{overflow:auto}
 code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}
-button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}
-button{overflow:visible}
+figure{margin:1em 40px}
+hr{box-sizing:content-box;height:0;overflow:visible}
+button,input,select,textarea{font:inherit;margin:0}
+optgroup{font-weight:700}
+button,input,select{overflow:visible}
 button,select{text-transform:none}
-button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}
-button[disabled],html input[disabled]{cursor:default}
+[type=button],[type=reset],[type=submit],button{cursor:pointer}
+[disabled]{cursor:default}
+[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}
 button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
-input{line-height:normal}
-input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}
-input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}
-input[type=search]{-webkit-appearance:textfield;box-sizing:content-box}
-input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}
+button:-moz-focusring,input:-moz-focusring{outline:ButtonText dotted 1px}
 fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}
-legend{border:0;padding:0}
-table{border-collapse:collapse;border-spacing:0}
-td,th{padding:0}
+legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}
+textarea{overflow:auto}
+[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}
+[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}
+[type=search]{-webkit-appearance:textfield}
+[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}
 .columns-root{font-size:0;margin:0 -10px}
 .col,.col-1,.col-10,.col-11,.col-12,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-lg-1,.col-lg-10,.col-lg-11,.col-lg-12,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-md-1,.col-md-10,.col-md-11,.col-md-12,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-sm-1,.col-sm-10,.col-sm-11,.col-sm-12,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9,.col-xs-1,.col-xs-10,.col-xs-11,.col-xs-12,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9{padding-left:10px;padding-right:10px;min-height:1px;display:inline-block;vertical-align:top;box-sizing:border-box}
 .col-0{display:none}
@@ -238,7 +240,7 @@ a.btn{text-decoration:none}
 .modal-success__content{text-align:center;max-width:620px;line-height:28px;margin:auto}
 .modal-success__title{padding-bottom:42px}
 .modal-success__title .modal-title{margin-bottom:12px}
-html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;position:relative}
+html{position:relative}
 body{background:#fff;color:#383838;margin:0;font:16px/1.428 "Helvetica Neue",Helvetica,Arial,sans-serif;min-width:1000px;min-height:100vh;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}
 a{text-decoration:none;color:#242424}
 a:hover{text-decoration:none;color:#bc0000}
