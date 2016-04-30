@@ -1,7 +1,3 @@
-//  Modal
-//------------------------------------------------------------------------------
-
-
 //  Layout ---------------------------------------------------------------------
 .modal,
 .modal-backdrop {
@@ -26,7 +22,7 @@
 		display: flex;
     	overflow-x: hidden;
     	overflow-y: auto;
-		
+
 		.no-flexbox & {
 			display: block;
 		}
@@ -44,7 +40,7 @@
 	margin: auto;
 	z-index: 1010;
 	font-size: $font-size-base + px;
-	
+
 	@include min-screen-height(600px) {
 		padding: 30px 0;
 	}
@@ -88,11 +84,11 @@
 	font-size: 32px;
 	background: transparent;
 	color: #000;
-	
+
 	&::before {
 		content: '\00d7';
 	}
-	
+
 	&:focus {
 		outline: none;
 	}
@@ -157,27 +153,27 @@
 	right: 0;
 	bottom: 0;
 	left: 0;
-	
+
 	padding: 42px;
 	display: flex;
 	transition: display 0s linear,
 				opacity 300ms ease;
-	
+
 	&[hidden] {
 		display: none;
 		opacity: 0;
 	}
-	
+
 	&__content {
 		text-align: center;
 		max-width: 620px;
 		line-height: 28px;
 		margin: auto;
 	}
-	
+
 	&__title {
 		padding-bottom: 42px;
-		
+
 		.modal-title {
 			margin-bottom: 12px;
 		}
