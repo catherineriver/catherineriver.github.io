@@ -19,13 +19,8 @@
 	}
 
 	.modal-open & {
-		display: flex;
     	overflow-x: hidden;
     	overflow-y: auto;
-
-		.no-flexbox & {
-			display: block;
-		}
 	}
 }
 
@@ -36,20 +31,29 @@
 }
 
 .modal-dialog {
-    max-width: 860px;
-	margin: auto;
 	z-index: 1010;
 	font-size: $font-size-base + px;
+	display: flex;
+    min-height: 100%;
+    flex-direction: column;
+    justify-content: center;
+	align-items: center;
+	box-sizing: border-box;
 
-	@include min-screen-height(600px) {
-		padding: 30px 0;
+	@media screen and (min-width: $breakpoint-xsmall){
+		padding: 30px;
 	}
 }
 
 .modal-content {
+	max-width: 860px;
 	position: relative;
 	background: #FFF;
 	box-shadow: 0 8px 30px -5px rgba(0,0,0,.5);
+
+	@media screen and (max-width: $breakpoint-xsmall){
+		min-height: 100%;
+	}
 }
 
 .modal-header {
@@ -111,6 +115,10 @@
 		opacity: 0;
 		transition: opacity .3s ease;
     }
+
+	&.in {
+		display: flex;
+	}
 
 	&.in .modal-dialog {
 		opacity: 1;

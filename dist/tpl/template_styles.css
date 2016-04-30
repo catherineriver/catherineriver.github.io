@@ -212,13 +212,14 @@ a.btn{text-decoration:none}
 .modal,.modal-backdrop{position:fixed;top:0;right:0;bottom:0;left:0}
 .modal{display:none;overflow:hidden;z-index:1040;-webkit-overflow-scrolling:touch}
 .modal:focus{outline:0}
-.modal-open .modal{display:-webkit-flex;display:-ms-flexbox;display:flex;overflow-x:hidden;overflow-y:auto}
-.no-flexbox .modal-open .modal{display:block}
+.modal-open .modal{overflow-x:hidden;overflow-y:auto}
 .modal-backdrop{background:#000;transition:opacity .2s ease;z-index:1030}
-.modal-dialog{max-width:860px;margin:auto;z-index:1010;font-size:16px}
-@media screen and (min-height:600px){.modal-dialog{padding:30px 0}
+.modal-dialog{z-index:1010;font-size:16px;display:-webkit-flex;display:-ms-flexbox;display:flex;min-height:100%;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;box-sizing:border-box}
+@media screen and (min-width:544px){.modal-dialog{padding:30px}
 }
-.modal-content{position:relative;background:#FFF;box-shadow:0 8px 30px -5px rgba(0,0,0,.5)}
+.modal-content{max-width:860px;position:relative;background:#FFF;box-shadow:0 8px 30px -5px rgba(0,0,0,.5)}
+@media screen and (max-width:544px){.modal-content{min-height:100%}
+}
 .modal-header{padding:20px 26px 15px;position:relative}
 .modal-body{position:relative;padding:0 26px 15px}
 .modal-footer{border-top:1px solid #dedede;margin-top:20px;padding:15px 26px}
@@ -229,6 +230,7 @@ a.btn{text-decoration:none}
 .btn-modal-close:hover{opacity:.6}
 .btn-modal-close:active{opacity:1}
 .modal.fade .modal-dialog{opacity:0;transition:opacity .3s ease}
+.modal.in{display:-webkit-flex;display:-ms-flexbox;display:flex}
 .modal.in .modal-dialog{opacity:1;transition:opacity .3s ease}
 .modal-backdrop.fade{opacity:0}
 .modal-backdrop.in{opacity:.5}
