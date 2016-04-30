@@ -1,6 +1,8 @@
 {
   "name": "goodinit-tpl",
+  "version": "0.1.0",
   "description": "A template for a quick start",
+  "author": "Balyasnikov Kirill",
   "devDependencies": {
     "browser-sync": "2.8.2",
     "gulp": "^3.9.0",
