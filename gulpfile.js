@@ -143,7 +143,7 @@ gulp.task('default', ['jade', 'sprite', 'sass', 'js' ], function () {
 
 	gulp.watch(["app/scss/**/*.+(scss|sass)"], ['sass']);
 
-	gulp.watch("app/template/**/*.jade", "app/template/**/*.svg", function(){
+	gulp.watch(["app/template/**/*.jade", "app/template/**/*.svg"], function(){
 		runSequence('jade', reload)});
 
 	gulp.watch(["app/js/**/*.js", "dist/tpl/js/**/*.js", "!dist/tpl/js/lib.min.js"], ['js']);
