@@ -108,7 +108,7 @@ textarea{overflow:auto}
 .col-xl-11{width:91.66667%}
 .col-xl-12{width:100%}
 }
-.grid-layout{font-size:0;margin:0 -10px}
+.columns-root{font-size:0;margin:0 -10px}
 .col-block{display:block}
 h1,h2,h3,h4,h5,h6{margin:0 0 .75em;line-height:1.1}
 h1{font-size:3em}

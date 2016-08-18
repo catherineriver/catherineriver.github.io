@@ -2,18 +2,18 @@ var gulp 			= require('gulp'),
 	browsersync		= require('browser-sync'),
 	notify 			= require("gulp-notify"),
 	plumber 		= require('gulp-plumber'),
-	
+
 	sass        	= require('gulp-sass'),
 	minifyCss 		= require('gulp-minify-css'),
 	csslint 		= require('gulp-csslint'),
-	
+
 	jade 			= require('gulp-jade'),
 	jadeInheritance = require('gulp-jade-inheritance'),
 	changed 		= require('gulp-changed'),
 	cached 			= require('gulp-cached'),
 	filter 			= require('gulp-filter'),
 	prettify 		= require('gulp-html-prettify'),
-	
+
 	concat 			= require('gulp-concat'),
 	uglify 			= require('gulp-uglify'),
 	rename 			= require("gulp-rename"),
@@ -23,30 +23,30 @@ var gulp 			= require('gulp'),
 
 	browsersList	= ['ie 8', 'last 2 versions'],
 	reload 			= browsersync.reload;
-	
+
 	var configPrettify = {
 		indent_char: '\t',
 		indent_size: 1,
 		indent_inner_html: true,
 		unformatted: []
 	};
-	
+
 	var configPlumber = {
 		errorHandler: notify.onError("\n<%= error.message %>")
 	};
-	
+
 	var customReporter = function(file) {
 		gutil.log(gutil.colors.cyan(file.csslint.errorCount)+' errors in '+gutil.colors.magenta(file.path));
-	 
+
 		file.csslint.results.forEach(function(result) {
 			gutil.log(result.error.message+' on line '+result.error.line);
 		});
 	};
-	
+
 	var app = {
 		jade: 'app/template/'
 	};
-	
+
 	var dist = {
 		css: 'dist/tpl/template_styles.css'
 	};
@@ -133,7 +133,7 @@ gulp.task('sprite', function () {
 // defaut task
 // ---------------------------------------------------------------------------------
 gulp.task('default', ['jade', 'sprite', 'sass', 'js' ], function () {
-	
+
 	browsersync({
 		server: {
 			baseDir: "dist",
@@ -143,7 +143,7 @@ gulp.task('default', ['jade', 'sprite', 'sass', 'js' ], function () {
 
 	gulp.watch(["app/scss/**/*.+(scss|sass)"], ['sass']);
 
-	gulp.watch("app/template/**/*.jade", function(){
+	gulp.watch("app/template/**/*.jade", "app/template/**/*.svg", function(){
 		runSequence('jade', reload)});
 
 	gulp.watch(["app/js/**/*.js", "dist/tpl/js/**/*.js", "!dist/tpl/js/lib.min.js"], ['js']);
@@ -153,4 +153,3 @@ gulp.task('default', ['jade', 'sprite', 'sass', 'js' ], function () {
 });
 
 gulp.task('build', ['jade', 'sprite', 'sass', 'js' ])
-	
