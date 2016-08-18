@@ -19,22 +19,22 @@
 	&:focus {
 		outline: 0;
 	}
+}
 
-	&:not(.in) {
-		visibility: hidden;
-		opacity: 0;
-	}
-
-	.modal-open & {
-  	overflow-x: hidden;
-  	overflow-y: auto;
-	}
+.modal:not(.in) {
+	visibility: hidden;
+	opacity: 0;
 }
 
 .modal::before {
 	content: '';
 	background-color: rgba(0, 0, 0, 0.5);
 	transition: opacity 400ms ease;
+}
+
+.modal-open .modal {
+	overflow-x: hidden;
+	overflow-y: auto;
 }
 
 .modal-dialog {
@@ -53,7 +53,7 @@
 
 	transition: opacity 150ms ease;
 
-	@media screen and (min-width: $breakpoint-xsmall){
+	@include min-screen($mobile) {
 		padding: 30px;
 	}
 }
@@ -66,7 +66,7 @@
 	background: #FFF;
 	box-shadow: 0 8px 30px -5px rgba(0,0,0,.5);
 
-	@media screen and (max-width: $breakpoint-xsmall){
+	@include min-screen($mobile) {
 		min-height: 100%;
 	}
 }

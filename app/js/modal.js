@@ -79,7 +79,6 @@
       if (!that.$element.parent().length) {
         that.$element.appendTo(that.$body) // don't move modals dom position
       }
-      console.log(that);
 
       that.$element
         .scrollTop(0)

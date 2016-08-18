@@ -3,15 +3,16 @@ html {
 }
 
 body {
-	background: $body-bg;
-	color: $font-color;
-	margin: 0;
-	font: #{$font-size-base}px/1.428 $font-sans-serif;
-	min-width: 1000px;
-	
-	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
+
+	min-height: 100vh;
+	margin: 0;
+
+	color: $font-color;
+	background: $body-bg;
+
+	font: #{$font-size-base}px/1.428 $font-sans-serif;
 }
 
 a {
@@ -31,22 +32,20 @@ a {
 //	----------------------------------------------------------------------------
 .page-layout {
 	position: relative;
+
 	padding: 32px 0 42px;
+
 	flex: 1 0 auto;
 }
 
 .container{
 	position: relative;
+
 	box-sizing: border-box;
+  max-width: $desktop;
 	margin: 0 auto;
 	padding: 0 20px;
-	width: 1000px;
-
-	@include min-screen($breakpoint-large) {
-		width: $breakpoint-large;
-	}
 }
-
 
 
 
@@ -56,37 +55,35 @@ a {
 .menu-primary {
 	font-size: 0;
 
-	&__item {
-		display: inline-block;
-		margin: 0 14px;
-		font-size: 14px;
-
-		&:first-child {
-			margin-left: 0;
-		}
-		
-		&.active {
-			
-			a {
-				text-decoration: none;
-				cursor: default;
-				color: inherit;				
-			}		
-		}
-	}
-	
 	a {
 		display: block;
 	}
 }
 
-.menu-secondary {
-
-	&__item{
-
-	}
+.menu-primary__item {
+	display: inline-block;
+	margin: 0 14px;
+	font-size: 14px;
 }
 
+.menu-primary__item:first-child {
+  margin-left: 0;
+}
+
+.menu-primary__item.active {
+
+  a {
+  	cursor: default;
+  	text-decoration: none;
+  	color: inherit;
+  }
+
+}
+
+
+.menu-secondary {
+
+}
 
 
 

@@ -4,17 +4,17 @@
 
 // Grid property
 
-$breakpoint-xsmall:			544px;
-$breakpoint-small:			768px;
-$breakpoint-medium:			992px;
-$breakpoint-large:			1200px;
-$breakpoint-xlarge:			1400px;
+$mobile:          			  544px;
+$portraitTablet:			    768px;
+$landscapeTablet:			    992px;
+$desktop:   			        1200px;
+$wideDesktop:	      		  1400px;
 
-$grid-breakpoint-xsmall: 	$breakpoint-xsmall;
-$grid-breakpoint-small: 	$breakpoint-small;
-$grid-breakpoint-medium: 	$breakpoint-medium;
-$grid-breakpoint-large: 	$breakpoint-large;
-$grid-breakpoint-xlarge:	$breakpoint-xlarge;
+$grid-breakpoint-xsmall: 	$mobile;
+$grid-breakpoint-small: 	$portraitTablet;
+$grid-breakpoint-medium: 	$landscapeTablet;
+$grid-breakpoint-large: 	$desktop;
+$grid-breakpoint-xlarge:	$wideDesktop;
 
 $grid-columns: 				12;
 $column-gap: 				20px;
