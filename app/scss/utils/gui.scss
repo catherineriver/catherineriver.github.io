@@ -1,7 +1,7 @@
 // GUI Page
 // -----------------------------------------------------------------------------
 .page-gui {
-	@include font-smoothing;
+
 }
 
 .gui-header {
@@ -11,15 +11,15 @@
 .gui-menu {
 	display: flex;
 	font-size: 14px;
-	
+
 	&__item {
 		padding: 0 16px;
-		
+
 		&:first-child {
 			padding-left: 0;
 		}
 	}
-	
+
 	a {
 		display: block;
 		padding: 14px 0 10px;
@@ -29,7 +29,7 @@
 	.active a{
 		border-color: #CE5943;
 	}
-	
+
 }
 
 
