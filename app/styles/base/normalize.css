@@ -7,6 +7,7 @@
 
 html {
   font-family: sans-serif; /* 1 */
+
   -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
 }
@@ -60,6 +61,7 @@ video {
 
 audio:not([controls]) {
   display: none;
+
   height: 0;
 }
 
@@ -111,9 +113,10 @@ a:hover {
  */
 
 abbr[title] {
-  border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
   text-decoration: underline dotted; /* 2 */
+
+  border-bottom: none; /* 1 */
 }
 
 /**
@@ -148,8 +151,9 @@ dfn {
  */
 
 h1 {
-  font-size: 2em;
   margin: 0.67em 0;
+
+  font-size: 2em;
 }
 
 /**
@@ -157,8 +161,8 @@ h1 {
  */
 
 mark {
+  color: #000;
   background-color: #ff0;
-  color: #000;
 }
 
 /**
@@ -176,10 +180,12 @@ small {
 
 sub,
 sup {
+  position: relative;
+
+  vertical-align: baseline;
+
   font-size: 75%;
   line-height: 0;
-  position: relative;
-  vertical-align: baseline;
 }
 
 sub {
@@ -239,9 +245,10 @@ figure {
  */
 
 hr {
+  overflow: visible; /* 2 */
+
   box-sizing: content-box; /* 1 */
   height: 0; /* 1 */
-  overflow: visible; /* 2 */
 }
 
 /* Forms
@@ -338,8 +345,9 @@ html [type="button"], /* 1 */
 
 button::-moz-focus-inner,
 input::-moz-focus-inner {
-  border: 0;
   padding: 0;
+
+  border: 0;
 }
 
 /**
@@ -356,9 +364,10 @@ input:-moz-focusring {
  */
 
 fieldset {
-  border: 1px solid #c0c0c0;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em;
+
+  border: 1px solid #c0c0c0;
 }
 
 /**
@@ -369,12 +378,15 @@ fieldset {
  */
 
 legend {
-  box-sizing: border-box; /* 1 */
-  color: inherit; /* 2 */
   display: table; /* 1 */
+
+  box-sizing: border-box; /* 1 */
   max-width: 100%; /* 1 */
   padding: 0; /* 3 */
+
   white-space: normal; /* 1 */
+
+  color: inherit; /* 2 */
 }
 
 /**

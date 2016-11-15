@@ -3,11 +3,10 @@ extends _layouts/_layout
 
 block vars
 	- var pageName = 'Главная страница'
-	- var bodyClass = ''
 
 block content
 
-	include _includes/_header
+	include _includes/header
 	.page-layout
 		.container
-			h1 Main title
+			h1 #{pageName}

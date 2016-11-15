@@ -1,0 +1,28 @@
+/* media */
+
+$mobileWidth:              512px;
+$portraitTabletWidth:      768px;
+$landscapeTabletWidth:     1024px;
+$desktopWidth:             1200px;
+$wideDesktopWidth:         1400px;
+
+$mobile:                  only screen and (min-width: $mobileWidth);
+$portraitTablet:          only screen and (min-width: $portraitTabletWidth);
+$landscapeTablet:         only screen and (min-width: $landscapeTabletWidth);
+$desktop:                 only screen and (min-width: $desktopWidth);
+$wideDesktop:             only screen and (min-width: $wideDesktopWidth);
+
+/* fonts */
+$font-size-root:		    16px;
+$primaryFont:  			    'Helvetica Neue', Helvetica, Arial, sans-serif;
+$secondaryFont:      		'Georgia', 'Times New Roman', Times, serif;
+
+/* colors */
+$body-bg:               #fff;
+$font-color:				    #383838;
+
+$brand-primary:			    #000;
+$brand-secondary:		    #999;
+
+$link-color:    		    #242424;
+$link-color-hover:    	#bc0000;

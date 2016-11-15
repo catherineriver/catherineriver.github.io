@@ -1,14 +1,9 @@
-// Form
-// -----------------------------------------------------------------------------
-
-
-// Layout ----------------------------------------------------------------------
-
 .form-layout {
-	
-	&--static{
-		
-	}
+
+}
+
+.form-layout--static {
+
 }
 
 .form-body {
@@ -16,16 +11,16 @@
 }
 
 .form-footer{
-	
+
 }
 
 .form-group {
 	margin-left: -24px;
+}
 
-	.form-block {
-		padding-left: 24px;
-		box-sizing: border-box;
-	}
+.form-group .form-block {
+	padding-left: 24px;
+	box-sizing: border-box;
 }
 
 .form-row {
@@ -42,10 +37,6 @@
 	}
 }
 
-
-
-// Fields ----------------------------------------------------------------------
-
 .form-label {
 	display: block;
 	cursor: pointer;
@@ -61,7 +52,7 @@
 	padding: 8px 0;
 	box-sizing: border-box;
 	width: 100%;
-	
+
 	&:focus {
 		border-color: #969696;
 		outline: none;
@@ -97,70 +88,47 @@
 	color: #737373;
 }
 
-
-
-
-// Controls
-// -----------------------------------------------------------------------------
-
 .controls-group {
-	
+
 }
 
-// basic
-
 .control {
-	
+
 	input {
 		position: absolute;
 		opacity: 0;
 		z-index: -1;
 	}
-	
+
 }
 
 .control-indicator {
 	position: relative;
-	
+
 	&::before {
 		content: '';
 	}
 }
 
-
-
-// checkbox
-
 .control-checkbox {
-	
+
 	input:checked + .control-indicator {
-		
+
 	}
-	
+
+}
+.control-radio {
+
+	input:checked + .control-indicator {
+
+	}
+
 }
 
-
-
-// Radio
-
 .control-radio {
-	
-	input:checked + .control-indicator {
-		
-	}
-	
-}
 
-
-
-// Button
-
-.control-radio {
-	
 	input:checked + .control-button {
-		
+
 	}
-	
+
 }
-
-
