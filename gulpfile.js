@@ -12,12 +12,13 @@ var gulp 						= require('gulp'),
 	cssvar		 				= require('postcss-simple-vars'),
 
 	jade 							= require('gulp-jade'),
-	jadeInheritance 		= require('gulp-jade-inheritance'),
+	jadeInheritance 	= require('gulp-jade-inheritance'),
 	changed 					= require('gulp-changed'),
 	cached 						= require('gulp-cached'),
 	filter 						= require('gulp-filter'),
 	prettify 					= require('gulp-html-prettify'),
 
+	clean 						= require('gulp-clean'),
 	concat 						= require('gulp-concat'),
 	uglify 						= require('gulp-uglify'),
 	rename 						= require('gulp-rename'),
@@ -93,8 +94,17 @@ gulp.task('js', function() {
 	.pipe(reload({stream:true}));
 })
 
+gulp.task('clean', function() {
+	return gulp.src('dist', {read: false})
+	.pipe(clean());
+});
 
-gulp.task('default', ['jade', 'css', 'js' ], function () {
+gulp.task('copy', function() {
+	gulp.src('./app/static/**')
+		.pipe(gulp.dest('dist/tpl'))
+});
+
+gulp.task('default', ['jade', 'css', 'js', 'copy' ], function () {
 
 	browsersync({
 		server: {
@@ -106,10 +116,11 @@ gulp.task('default', ['jade', 'css', 'js' ], function () {
 
 	gulp.watch(["app/styles/**/*.css"], ['css']);
 
-	gulp.watch(["app/template/**/*.jade", "app/template/**/*.svg"], function(){
-		runSequence('jade', reload)});
+	gulp.watch(["app/template/**/*.jade", "app/template/**/*.svg"], function(){ runSequence('jade', reload)});
 
-	gulp.watch(["app/js/**/*.js", "dist/tpl/js/**/*.js", "!dist/tpl/js/lib.min.js"], ['js']);
+	gulp.watch(["app/js/**/*.js"], ['js']);
+
+	gulp.watch("app/tpl/**/*", function() { runSequence('copy', reload) });
 });
 
-gulp.task('build', ['jade', 'css', 'js' ])
+gulp.task('build', ['clean', 'jade', 'css', 'js' ])
