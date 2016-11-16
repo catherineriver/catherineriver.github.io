@@ -1,123 +1,113 @@
-//	 Buttons
-//------------------------------------------------------------------------------
-
 .btn {
-	display: inline-block;
-	text-align: center;
-	cursor: pointer;
-	border: 0;
-	padding: 0;
-	margin: 0;
-	line-height: 1.42857;
-	white-space: nowrap;
-	user-select: none;
-	box-sizing: border-box;
+  display: inline-block;
 
-	&:focus {
-		outline: inherit;
-	}
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 
-	&.disabled, &.disable:hover,
-	&[disabled], &[disabled]:hover {
-		pointer-events: none;
-		box-shadow: none;
-		cursor: default;
-		opacity: 0.5;
-	}
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+  white-space: nowrap;
+
+  border: 0;
+
+  line-height: 1.42857;
 }
-	a.btn {
-		text-decoration: none;
-	}
+
+.btn[disabled],
+.btn[disabled]:hover {
+  cursor: default;
+  pointer-events: none;
+
+  opacity: 0.5;
+  box-shadow: none;
+}
+
+a.btn {
+  text-decoration: none;
+}
 
 .btn-basic {
-	background: white;
-	border: 1px solid #dedede;
-	border-radius: 3px;
-	color: #383838;
+  color: #383838;
+  border: 1px solid #dedede;
+  border-radius: 3px;
+  background: white;
+}
 
-	&:hover {
-		background: #fafafa;
-		color: #222;
-	}
+.btn-basic:hover {
+  color: #222;
+  background: #fafafa;
+}
 
-	&:active {
-		box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.125);
-	}
+.btn-basic:active {
+  box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.125);
 }
 
 .btn-action {
-	background: #4a6da8;
-	border: 1px solid #426092;
-	border-radius: 3px;
-	color: #FFF;
-
-	&:hover {
-		background: #2759a6;
-		border-color: #143a77;
-	}
-
-	&:active {
-		box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.325);
-	}
+  color: #fff;
+  border: 1px solid #426092;
+  border-radius: 3px;
+  background: #4a6da8;
 }
 
-.btn-outline{
-
+.btn-action:hover {
+  border-color: #143a77;
+  background: #2759a6;
 }
 
+.btn-action:active {
+  box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.325);
+}
 
-
-// Button size -----------------------------------------------------------------
-
+/* button sizes */
 .btn-block {
-	box-sizing: border-box;
-	display: block;
-	width: 100%;
+  display: block;
+
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .btn-small {
-	padding: 0.5em 1.6em;
-	font-size: 12px;
+  padding: 0.5em 1.6em;
+
+  font-size: 12px;
 }
 
 .btn-normal {
-	padding: 0.5em 1.6em;
-	font-size: 14px;
+  padding: 0.5em 1.6em;
+
+  font-size: 14px;
 }
 
 .btn-medium {
-	padding: 1em 2em;
-	font-size: 16px;
+  padding: 1em 2em;
+
+  font-size: 16px;
 }
 
 .btn-large {
-	padding: .85em 2.6em .87em;
-	font-size: 20px;
+  padding: 0.85em 2.6em 0.87em;
+
+  font-size: 20px;
 }
 
-
-
-// Button set ------------------------------------------------------------------
-
 .btn-group {
-	font-size: 0;
+  font-size: 0;
 }
 
 .btn-group-right {
-	text-align: right;
+  text-align: right;
 }
 
 .btn + .btn {
-	margin-left: 1em;
+  margin-left: 1em;
 }
 
+.link {
+  cursor: pointer;
+}
 
-// Link button -----------------------------------------------------------------
-
-.link-pseudo {
-	cursor: pointer;
-	
-	&:hover {
-		color: $link-color-hover;
-	}
+.link {
+  color: $link-color-hover;
 }

@@ -1,190 +1,184 @@
-.modal,
-.modal::before {
-	position: fixed;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .modal {
-	z-index: 1040;
+  z-index: 1040;
 
-	overflow: hidden;
-	-webkit-overflow-scrolling: touch;
-	transition: visibility 450ms ease, opacity 450ms ease;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
 
-	&:focus {
-		outline: 0;
-	}
+  transition: visibility 450ms ease, opacity 450ms ease;
+
+  outline-width: 0;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .modal:not(.in) {
-	visibility: hidden;
-	opacity: 0;
+  visibility: hidden;
+
+  opacity: 0;
 }
 
 .modal::before {
-	content: '';
-	background-color: rgba(0, 0, 0, 0.5);
-	transition: opacity 400ms ease;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  content: '';
 }
 
 .modal-open .modal {
-	overflow-x: hidden;
-	overflow-y: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .modal-dialog {
-	z-index: 1010;
+  z-index: 1010;
 
-	display: flex;
+  display: flex;
   flex-direction: column;
 
-	box-sizing: border-box;
+  box-sizing: border-box;
   min-height: 100%;
 
-	font-size: $font-size-root;
+  transition: opacity 150ms ease;
 
+  font-size: $font-size-root;
+
+  align-items: center;
   justify-content: center;
-	align-items: center;
 
-	transition: opacity 150ms ease;
-
-	@media $mobile {
-		padding: 30px;
-	}
+  @media $mobile {
+    padding: 30px;
+  }
 }
 
 .modal-content {
-	position: relative;
+  position: relative;
 
-	max-width: 860px;
+  max-width: 860px;
 
-	background: #FFF;
-	box-shadow: 0 8px 30px -5px rgba(0, 0, 0, 0.5);
+  background: #fff;
+  box-shadow: 0 8px 30px -5px rgba(0, 0, 0, 0.5);
 
-	@media $mobile {
-		min-height: 100%;
-	}
+  @media $mobile {
+    min-height: 100%;
+  }
 }
 
 .modal-header {
-	position: relative;
+  position: relative;
 
-	padding: 20px 26px 15px;
+  padding: 20px 26px 15px;
 }
 
 .modal-body {
-	position: relative;
+  position: relative;
 
-	padding: 0 26px 15px;
+  padding: 0 26px 15px;
 }
 
 .modal-footer {
-	margin-top: 20px;
-	padding: 15px 26px;
+  margin-top: 20px;
+  padding: 15px 26px;
 
-	border-top: 1px solid #dedede;
+  border-top: 1px solid #dedede;
 }
 
 .modal-title {
-	font-weight: 500;
+  font-weight: 500;
 }
 
 .btn-modal-close {
-	position: absolute;
-	z-index: 12;
-	top: 0;
-	right: 0;
+  position: absolute;
+  z-index: 12;
+  top: 0;
+  right: 0;
 
-	padding: 3px 12px;
+  padding: 3px 12px;
 
-	color: #000;
-	background: transparent;
+  color: #000;
+  background: transparent;
 
-	font-size: 32px;
+  font-size: 32px;
 
-	&::before {
-		content: '\00d7';
-	}
-
-	&:focus {
-		outline: none;
-	}
-
-	&:hover{
-    opacity: .6;
+  &::before {
+    content: '\00d7';
   }
 
-	&:active{
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
     opacity: 1;
   }
 }
 
-.modal {
+.modal.fade .modal-dialog {
+  opacity: 0;
+}
 
-	&.fade .modal-dialog {
-		opacity: 0;
-  }
-
-	&.in .modal-dialog {
-		opacity: 1;
-  }
-
-	&.in::before {
-		opacity: 1;
-	}
+.modal.in .modal-dialog {
+  opacity: 1;
 }
 
 .modal-open {
-	overflow: hidden;
+  overflow: hidden;
 }
 
 .modal-success {
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 
-	display: flex;
+  display: flex;
 
-	padding: 42px;
+  padding: 42px;
 
-	transition: display 0 linear, opacity 300ms ease;
-	background: #fff;
+  transition: display 0 linear, opacity 300ms ease;
 
-	&[hidden] {
-		display: none;
+  background: #fff;
+}
 
-		opacity: 0;
-	}
+.modal-success[hidden] {
+  display: none;
 
-	&__content {
-		max-width: 620px;
-		margin: auto;
+  opacity: 0;
+}
 
-		text-align: center;
+.modal-success__content {
+  max-width: 620px;
+  margin: auto;
 
-		line-height: 28px;
-	}
+  text-align: center;
 
-	&__title {
-		padding-bottom: 42px;
+  line-height: 28px;
+}
 
-		.modal-title {
-			margin-bottom: 12px;
-		}
-	}
+.modal-success__title {
+  padding-bottom: 42px;
 }
 
 .modal-scrollbar-measure {
-	position: absolute;
-	top: -9999px;
+  position: absolute;
+  top: -9999px;
 
-	overflow: scroll;
+  overflow: scroll;
 
-	width: 50px;
-	height: 50px;
+  width: 50px;
+  height: 50px;
 }

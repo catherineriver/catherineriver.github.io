@@ -1,25 +1,22 @@
-.page-header {
-	background: #f6f5f3;
-	padding: 12px 0;
-}
-
 .header-logo {
-
+  margin-right: 20px;
 }
 
 .site-logo {
-	display: block;
-	text-decoration: none;
+  display: block;
 
-	&:focus {
-		outline: none;
-	}
+  text-decoration: none;
 }
 
 .header-main {
+  display: flex;
+  flex-direction: row;
 
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header-nav {
-
+  font-size: 0;
 }

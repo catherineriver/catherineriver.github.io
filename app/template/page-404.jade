@@ -2,11 +2,9 @@
 extends _layouts/_layout
 
 block vars
-	- var footer = true
 	- var pageName = 'Страница 404'
 
 block content
-	include _includes/header
 	.page-layout
 		section.page-404
 			header.page-404__header
@@ -16,5 +14,3 @@ block content
 			.page-404__action
 				.page-404-button
 					a.btn.btn-medium.btn-basic(href="index-main.html") Вернуться на главную страницу
-
-	include _includes/footer

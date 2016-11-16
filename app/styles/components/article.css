@@ -1,203 +1,166 @@
-// Article
-// -----------------------------------------------------------------------------
-
-
-// Basic article ---------------------------------------------------------------
-
 .article-layout {
-	font-size: $font-size-root;
-	line-height: 30px;
+  font-size: $font-size-root;
+  line-height: 30px;
 }
 
 .article-body {
+  p {
+    margin: 0.8em 0;
+    font-size: inherit;
+  }
+  ul {
+    margin-top: 1em;
+    padding: 0 0 0 20px;
+    list-style: disc outside;
 
-	p {
-		font-size: inherit;
-		margin: 0.8em 0 0 0;
-	}
+    li + li {
+      margin-top: 0.7em;
+    }
+  }
+  ol {
+    margin-top: 1em;
+    padding: 0 0 0 20px;
+    list-style-type: decimal;
 
-	ul {
-		list-style: disc outside;
-		padding: 0 0 0 20px;
-		margin-top: 1em;
+    li + li {
+      margin-top: 0.7em;
+    }
+  }
+  figure {
+    margin: 0;
+    padding: 2.5em 0 1.7em;
 
-		li + li {
-			margin-top: 0.7em;
-		}
-	}
-	
-	ol {
-		list-style-type: decimal;
-		padding: 0 0 0 20px;
-		margin-top: 1em;
+    img {
+      margin: 0 0 0.5em;
+    }
+  }
+  figcaption {
+    font-style: italic;
+    font-size: 0.85em;
+  }
+  img {
+    margin: 2.5em 0 1.5em;
+    max-width: 100%;
+  }
+  blockquote {
+    margin-left: 0;
+    padding: 0 0 0 20px;
+    border-left: 4px solid #dedede;
+    font-weight: 300;
+    font-size: 21px;
+    line-height: 1.48;
+  }
+  strong,
+  b {
+    font-weight: bolder;
+  }
+  h3,
+  h4,
+  h5 {
+    margin: 52px 0 0;
+    line-height: 1.25;
 
-		li + li {
-			margin-top: 0.7em;
-		}
-	}
-
-	figure {
-		padding: 2.5em 0 1.7em;
-		margin: 0;
-
-		img {
-			margin: 0 0 0.5em;
-		}
-	}
-
-	figcaption {
-		font-style: italic;
-		font-size: .85em;
-	}
-
-	img {
-		margin: 2.5em 0 1.5em;
-		max-width: 100%;
-	}
-
-	blockquote {
-		border-left: 4px solid #dedede;
-		padding: 0 0 0 20px;
-		margin-left: 0;
-		font-size: 21px;
-		font-weight: 300;
-		line-height: 1.48;
-	}
-
-	strong,
-	b {
-		font-weight: bolder;
-	}
-
-	h3,	h4,	h5 {
-		margin: 52px 0 0;
-		line-height: 1.25;
-
-		&:first-child {
-			margin-top: 0;
-		}
-	}
+    &:first-child {
+      margin-top: 0;
+    }
+  }
 }
-
-
-
-// Header ----------------------------------------------------------------------
 
 .article-header {
-	margin-bottom: 18px;
+  margin-bottom: 18px;
 
-	&__title {
-		font-size: em(42);
-		margin-bottom: 4px;
-	}
-
-	&__date {
-		font-size: em(14);
-		font-style: italic;
-		color: #555;
-	}
+  &__title {
+    margin-bottom: 4px;
+    font-size: 42px;
+  }
+  &__date {
+    color: #555;
+    font-style: italic;
+    font-size: 14px;
+  }
 }
 
-
-// Pagination ------------------------------------------------------------------
-
 .pagination {
-	position: relative;
+  position: relative;
 }
 
 .pagination__list {
-	font-size: 0;
-	text-align: center;
-	user-select: none;
+  text-align: center;
+  font-size: 0;
+  user-select: none;
 
-	li {
-		display: inline-block;
-		font-size: $font-size-root;
-	}
-	
-	a {
-		padding: em(14);
-	}
-	
-	span {
-		cursor: default;
-	}
-	
-	.active a {
-		cursor: default;
-		pointer-events: none;
-	}
+  li {
+    display: inline-block;
+    font-size: $font-size-root;
+  }
+  a {
+    padding: 14px;
+  }
+  span {
+    cursor: default;
+  }
+  .active a {
+    cursor: default;
+    pointer-events: none;
+  }
 }
 
 .pagination__controls {
-	position: absolute;
-	left: 0;
-	right: 0;
-	font-size: $font-size-root;
+  position: absolute;
+  right: 0;
+  left: 0;
+  font-size: $font-size-root;
 }
 
 .pagination__control {
-	position: absolute;
+  position: absolute;
 
-	&--left {
-		left: 0;
-	}
-	
-	&--right {
-		right: 0;
-	}
+  &--left {
+    left: 0;
+  }
+  &--right {
+    right: 0;
+  }
 }
 
-
-
-// Article Sibling -------------------------------------------------------------
-
 .content-siblings {
-	position: relative;
+  position: relative;
 }
 
 .content-sibling__arrow {
-	width: 40%;
+  width: 40%;
 
-	a {
-
-	}
-
-	a::before {
-
-	}
+  a {
+    color: inherit;
+  }
+  a::before {
+    position: absolute;
+  }
 }
 
 .content-sibling__arrow-next {
-	float: right;
-	text-align: right;
+  float: right;
+  text-align: right;
 
-	&::after {
-		position: absolute;
-		content: "→";
-		left: 100%;
-	}
+  &::after {
+    left: 100%;
+    content: "→";
+  }
 }
 
 .content-sibling__arrow-prev {
-	float: left;
+  float: left;
 
-	&::before {
-		position: absolute;
-		content: "←";
-		right: 100%;
-	}
+  &::before {
+    right: 100%;
+    content: "←";
+  }
 }
 
-// Breadcrumbs -----------------------------------------------------------------
-
 .breadcrumbs {
-	
-	li {
-		display: inline-block;
-	}
+  font-size: 0;
+}
 
-	li:first-child {
-
-	}
+.breadcrumbs li {
+  display: inline-block;
 }

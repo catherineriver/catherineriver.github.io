@@ -3,109 +3,135 @@
 }
 
 html {
-	position: relative;
-  @include font-smoothing();
+  position: relative;
+
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100vh;
+  margin: 0;
+
+  color: $font-color;
+  background: $body-bg;
+
+  font-family: $primaryFont;
+  font-size: $font-size-root;
+  line-height: 1.428;
+}
+
+a {
+  text-decoration: none;
+
+  color: $link-color;
+}
+
+a:hover {
+  text-decoration: none;
+
+  color: $link-color-hover;
 }
 
 /* Headings */
-
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-	margin: 0 0 0.75em;
+  margin: 0 0 0.75em;
 
-	line-height: 1.1;
+  line-height: 1.1;
 }
 
 h1 {
-	font-size: 3rem;
+  font-size: 3rem;
 }
 
 h2 {
-	font-size: 2.625rem;
+  font-size: 2.625rem;
 }
 
 h3 {
-	font-size: 2.25rem;
+  font-size: 2.25rem;
 }
 
 h4 {
-	font-size: 1.875rem;
+  font-size: 1.875rem;
 }
 
 h5 {
-	font-size: 1.6rem;
+  font-size: 1.6rem;
 }
 
 h6 {
-	font-size: 1.125rem;
+  font-size: 1.125rem;
 }
 
 em {
-	font-style: italic;
+  font-style: italic;
 }
 
 p {
-	margin: 0;
+  margin: 0;
 }
 
 blockquote,
 q {
-	quotes: none;
+  quotes: none;
 }
 
 blockquote::before,
 blockquote::after,
 q::before,
 q::after {
-	content: '';
-	content: none;
+  content: '';
 }
 
 .align-center {
-	text-align: center;
+  text-align: center;
 }
 
 .align-left {
-	text-align: left;
+  text-align: left;
 }
 
 .align-right {
-	text-align: right;
+  text-align: right;
 }
 
 .pull-left {
-	float: left;
+  float: left;
 }
 
 .pull-right {
-	float: right;
+  float: right;
 }
 
 dl,
 dd,
 menu,
 ol,
-ul{
-	margin: 0;
+ul {
+  margin: 0;
 }
 
 menu,
 ol,
-ul{
-	padding: 0;
-
-	list-style-type: none;
+ul {
+  padding: 0;
+  list-style-type: none;
 }
 
 input::placeholder,
-textarea::placeholder{
-	color: #949494
+textarea::placeholder {
+  color: #949494;
 }
 
-label{
-	user-select: none
+label {
+  user-select: none;
 }

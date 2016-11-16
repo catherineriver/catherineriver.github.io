@@ -2,25 +2,24 @@
   display: flex;
   flex-direction: row;
 
-	padding: 22px 0 0;
+  padding: 22px 0 0;
 
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .footer-copyright {
-	font-size: 0.8rem;
+  font-size: 0.8rem;
 }
 
-
 .footer-developers {
-	font-size: 0.8rem;
+  font-size: 0.8rem;
 }
 
 .footer-developers__link {
-	text-decoration: none;
+  text-decoration: none;
 
-	color: inherit;
+  color: inherit;
 }
 
 .footer-developers__link:hover {

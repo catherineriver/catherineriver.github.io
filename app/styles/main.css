@@ -1,8 +1,9 @@
 @import 'base/vars';
 @import 'base/normalize';
 @import 'base/basic';
-@import 'components/layout';
+@import 'components/page';
 @import 'components/header';
+@import 'components/menu';
 @import 'components/footer';
 @import 'components/article';
 @import 'components/buttons';

@@ -1,0 +1,30 @@
+@import "../base/vars";
+
+.page-layout {
+  position: relative;
+
+  padding: 32px 0 42px;
+
+  flex-grow: 1;
+}
+
+.page-header {
+  padding: 12px 0;
+
+  background: #f6f5f3;
+}
+
+.page-footer {
+  padding-bottom: 20px;
+
+  border-top: 2px solid #f6f5f3;
+  background: #fff;
+}
+
+.page-section {
+  position: relative;
+
+  max-width: $desktopWidth;
+  margin: 0 auto;
+  padding: 0 20px;
+}
