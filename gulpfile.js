@@ -120,7 +120,7 @@ gulp.task('default', ['jade', 'css', 'js', 'copy' ], function () {
 
 	gulp.watch(["app/js/**/*.js"], ['js']);
 
-	gulp.watch("app/tpl/**/*", function() { runSequence('copy', reload) });
+	gulp.watch("app/static/**/*", function() { runSequence('copy', reload) });
 });
 
 gulp.task('build', ['clean', 'jade', 'css', 'js' ])

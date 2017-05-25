@@ -1,11 +1,6 @@
-.header-logo {
-  margin-right: 20px;
-}
-
-.site-logo {
-  display: block;
-
-  text-decoration: none;
+.header-title {
+  display: flex;
+  flex-direction: column;
 }
 
 .header-main {

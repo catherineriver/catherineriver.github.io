@@ -13,8 +13,8 @@ $desktop:                 only screen and (min-width: $desktopWidth);
 $wideDesktop:             only screen and (min-width: $wideDesktopWidth);
 
 /* fonts */
-$font-size-root:		    16px;
-$primaryFont:  			    'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-size-root:		    26px;
+$primaryFont:  			    'Fira Sans', Helvetica, Arial, sans-serif;
 $secondaryFont:      		'Georgia', 'Times New Roman', Times, serif;
 
 /* colors */

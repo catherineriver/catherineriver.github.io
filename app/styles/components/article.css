@@ -6,7 +6,11 @@
 .article-body {
   p {
     margin: 0.8em 0;
-    font-size: inherit;
+    font-size: 18px;
+    @media $mobile {
+      font-size: inherit;
+      line-height: 35px;
+    }
   }
   ul {
     margin-top: 1em;

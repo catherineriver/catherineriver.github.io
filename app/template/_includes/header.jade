@@ -1,30 +1,8 @@
 include mixins
 
 header.header
-	.header-logo
-		a.site-logo(title="На главную" href="/") App name
-
 	.header-main
-		nav.header-nav
-			+nav('menu-primary',[
-				{
-					name: 'Услуги',
-					href: '/'
-				}, {
-					name: 'Новости',
-						href: '/'
-				}, {
-					name: 'Проекты',
-					href: '/'
-				}, {
-					name: 'О нас',
-					href: '/'
-				}, {
-					name: 'Контакты',
-					href: '/'
-				}
-			])
-
+		.header-title
+			p Baliasnikova Ekaterina
 		.header-contacts
-			a(href="tel:").header-phone +7 (8452) 933-994
-			span.link-pseudo.header-contacts__tip(data-toggle="modal" data-target="#modal") Перезвоните мне
+			a(href="mailto:balyasnikovak@gmail.com").header-phone balyasnikovak@gmail.com
