@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+		<title>Главная страница</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width">
+		<link sizes="57x57" href="tpl/images/ico/apple-touch-icon-57x57.png" rel="apple-touch-icon">
+		<link sizes="114x114" href="tpl/images/ico/apple-touch-icon-114x114.png" rel="apple-touch-icon">
+		<link sizes="72x72" href="tpl/images/ico/apple-touch-icon-72x72.png" rel="apple-touch-icon">
+		<link sizes="144x144" href="tpl/images/ico/apple-touch-icon-144x144.png" rel="apple-touch-icon">
+		<link sizes="60x60" href="tpl/images/ico/apple-touch-icon-60x60.png" rel="apple-touch-icon">
+		<link sizes="120x120" href="tpl/images/ico/apple-touch-icon-120x120.png" rel="apple-touch-icon">
+		<link sizes="76x76" href="tpl/images/ico/apple-touch-icon-76x76.png" rel="apple-touch-icon">
+		<link sizes="152x152" href="tpl/images/ico/apple-touch-icon-152x152.png" rel="apple-touch-icon">
+		<link sizes="180x180" href="tpl/images/ico/apple-touch-icon-180x180.png" rel="apple-touch-icon">
+		<link sizes="16x16 32x32 64x64" href="tpl/images/ico/favicon.png" type="image/png" rel="icon">
+		<!--[if IE]><link href="tpl/images/ico/favicon.ico" rel="shortcut icon"><![endif]-->
+		<script src="https://use.typekit.net/egp7tne.js"></script>
+		<script>
+			try{Typekit.load({ async: true });}catch(e){}
+		</script>
+		<link href="tpl/template_styles.css" rel="stylesheet">
+		<script src="tpl/js/vendor/modernizr.js"></script>
+		<script>
+			window.jQuery || document.write('<script src="tpl/js/vendor/jquery-1.11.3.min.js"><\/script>')
+		</script>
+		<script src="tpl/js/lib.min.js"></script>
+		<script src="tpl/js/main.js"></script>
+	</head>
+
+	<body>
+		<header class="row-header">
+			<div class="container header-desktop">
+				<button class="btn-menu js-mobile">
+					<i></i>
+				</button>
+				<div class="header-logo">
+					<a title="На главную" href="/" class="site-logo">Julia Verma</a>
+				</div>
+				<div class="header-nav">
+					<ul class="menu-primary">
+						<li class="menu-primary__item">
+							<a href="/services-page.html">Услуги стилиста</a>
+						</li>
+						<li class="menu-primary__item">
+							<a href="/feedback-page.html">Отзывы</a>
+						</li>
+						<li class="menu-primary__item">
+							<a href="/portfolio.html">Портфолио</a>
+						</li>
+						<li class="menu-primary__item">
+							<a href="/blog.html">Блог</a>
+						</li>
+						<li class="menu-primary__item">
+							<a href="/">Твори добро</a>
+						</li>
+					</ul>
+				</div>
+				<div class="header-contacts">
+					<a href="tel:" class="header-phone">+7 (8452) 933-994</a>
+					<span data-toggle="modal" data-target="#callback" class="header-contacts__tip">Перезвоните мне</span>
+				</div>
+			</div>
+			<div class="header-mobile">
+				<div class="header-nav">
+					<ul class="menu-primary">
+						<li class="menu-primary__item">
+							<a href="/">Услуги стилиста</a>
+						</li>
+						<li class="menu-primary__item">
+							<a href="/">Отзывы</a>
+						</li>
+						<li class="menu-primary__item">
+							<a href="/">Портфолио</a>
+						</li>
+						<li class="menu-primary__item">
+							<a href="/">Блог</a>
+						</li>
+						<li class="menu-primary__item">
+							<a href="/">Твори добро</a>
+						</li>
+					</ul>
+				</div>
+				<div class="header-contacts">
+					<a href="tel:" class="header-phone">+7 (8452) 933-994</a>
+					<span data-toggle="modal" data-target="#callback" class="header-contacts__tip">Перезвоните мне</span>
+				</div>
+			</div>
+		</header>
+		<div class="page-layout">
+			<div class="row">
+				<div class="mainpage-showcase">
+					<div class="mainpage-showcase__cover">
+						<img src="tpl/assets/mainpage-cover.jpg" width="1980">
+					</div>
+					<div class="container">
+						<div class="mainpage-mag">
+							<div class="mainpage-mag__center">
+								<div class="mainpage-mag__block">
+									<div class="mainpage-mag__title mag-48">Юлия Верма
+										<span class="color-main">твой персональный стилист</span>
+									</div>
+								</div>
+							</div>
+							<div class="mainpage-mag__left">
+								<a href="#" class="mainpage-mag__block">
+									<div class="mainpage-mag__title mag-48">Как найти
+										<span class="color-main">свой стиль</span>
+									</div>
+									<div class="mainpage-mag__text">Стиль — это способ сказать, кто ты есть, не произнеся ни слова</div>
+								</a>
+								<a href="#" class="mainpage-mag__block">
+									<div class="mag-42">Главные
+										<br>тренды
+										<br>
+										<span class="color-secondary">осени
+											<br>2013</div>
+								</a>
+							</div>
+							<div class="mainpage-mag__right">
+								<a href="#" class="mainpage-mag__block">
+									<div class="mag-48 mag-48--black color-secondary">10 вещей</div>
+									<div class="mainpage-mag__text mag-text-32">которые должны быть в гардеробе каждой женщины</div>
+								</a>
+								<a href="#" class="mainpage-mag__block">
+									<div class="mag-32 color-secondary">Идеальный гардероб</div>
+									<div class="mainpage-mag__text mag-text-18">секреты составления</div>
+								</a>
+								<a href="#" class="mainpage-mag__block">
+									<div class="mag-32 color-main">Преображение
+										<span class="mag-68">Елены</span>
+									</div>
+									<div class="mainpage-mag__text mag-text-26">или шоппинг с позитивом</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="portfolio-layout mainpage-portfolio">
+					<div class="container">
+						<div class="section-header">
+							<h3 class="section-header__title">Лучшие образы</h3>
+							<div class="section-header__text">
+								<p>Каждый созданный образ отражает индивидуальные качества человека</p>
+							</div>
+						</div>
+						<div class="portfolio-list portfolio-list--main">
+							<a href="#" class="portfolio-item portfolio-item--md">
+								<div class="portfolio-item__wrap">
+									<img src="tpl/assets/portfolio/cover-lg-1.jpg">
+									<div class="portfolio-item__meta">
+										<div class="portfolio-item__title">Маргарита</div>
+										<p>Анализ гардероба, шоппинг–сопровождение</p>
+									</div>
+								</div>
+							</a>
+							<a href="#" class="portfolio-item portfolio-item--md">
+								<div class="portfolio-item__wrap">
+									<img src="tpl/assets/portfolio/cover-lg-1.jpg">
+									<div class="portfolio-item__meta">
+										<div class="portfolio-item__title">Маргарита</div>
+										<p>Анализ гардероба, шоппинг–сопровождение</p>
+									</div>
+								</div>
+							</a>
+							<a href="#" class="portfolio-item portfolio-item--sm">
+								<div class="portfolio-item__wrap">
+									<img src="tpl/assets/portfolio/cover-sm-1.jpg">
+									<div class="portfolio-item__meta">
+										<div class="portfolio-item__title">Маргарита</div>
+										<p>Анализ гардероба, шоппинг–сопровождение</p>
+									</div>
+								</div>
+							</a>
+							<a href="#" class="portfolio-item portfolio-item--sm">
+								<div class="portfolio-item__wrap">
+									<img src="tpl/assets/portfolio/cover-sm-1.jpg">
+									<div class="portfolio-item__meta">
+										<div class="portfolio-item__title">Маргарита</div>
+										<p>Анализ гардероба, шоппинг–сопровождение</p>
+									</div>
+								</div>
+							</a>
+							<a href="#" class="portfolio-item portfolio-item--sm">
+								<div class="portfolio-item__wrap">
+									<img src="tpl/assets/portfolio/cover-sm-1.jpg">
+									<div class="portfolio-item__meta">
+										<div class="portfolio-item__title">Маргарита</div>
+										<p>Анализ гардероба, шоппинг–сопровождение</p>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="reasons-layout">
+					<div class="container">
+						<div class="section-header">
+							<h3 class="section-header__title">Зачем вам обращаться
+								<br>к стилисту</h3>
+						</div>
+						<div class="reasons-list clearfix">
+							<div class="reasons__item">
+								<div class="reasons-image">
+									<img src="tpl/assets/reasons/r-1.jpg">
+								</div>
+								<div class="reasons__item__content">
+									<div class="reasons__item__title">Неудачный опыт обращения к стилистам?</div>
+									<p>Сертифицированный специалист в области персонального шопинга и имидж-консалтинга, автор и ведущая вебинаров и статей о моде и стиле.</p>
+								</div>
+							</div>
+							<div class="reasons__item">
+								<div class="reasons__item__content">
+									<div class="reasons__item__title">Хотите привлечь внимание окружающих?</div>
+									<p>Сертифицированный специалист в области персонального шопинга и имидж-консалтинга, автор и ведущая вебинаров и статей о моде и стиле.</p>
+								</div>
+								<div class="reasons-image">
+									<img src="tpl/assets/reasons/r-2.jpg">
+								</div>
+							</div>
+							<div class="reasons__item reasons__item--mode-left">
+								<div class="reasons-image">
+									<img src="tpl/assets/reasons/r-3.jpg">
+								</div>
+								<div class="reasons__item__content">
+									<div class="reasons__item__title">Неуверены в себе и в своем стиле?</div>
+									<p>Сертифицированный специалист в области персонального шопинга и имидж-консалтинга, автор и ведущая вебинаров и статей о моде и стиле.</p>
+								</div>
+							</div>
+							<div class="reasons__item reasons__item--mode-right">
+								<div class="reasons-image">
+									<img src="tpl/assets/reasons/r-4.jpg">
+								</div>
+								<div class="reasons__item__content">
+									<div class="reasons__item__title">Думаете чтобы выглядеть стильно нужно быть богатым?</div>
+									<p>Сертифицированный специалист в области персонального шопингаи имидж-консалтинга, автор и ведущая вебинаров и статей о моде и стиле.</p>
+								</div>
+							</div>
+							<div class="reasons__item">
+								<div class="reasons-image">
+									<img src="tpl/assets/reasons/r-5.jpg">
+								</div>
+								<div class="reasons__item__content">
+									<div class="reasons__item__title">Устали от бесконечного хождения по магазинам?</div>
+									<p>Сертифицированный специалист в области персонального шопинга и имидж-консалтинга, автор и ведущая вебинаров и статей о моде и стиле.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<form class="form-section">
+						<div class="form-layout">
+							<div class="form-content">
+								<h2 class="form-content__title">Заказать услуги стилиста</h2>
+								<p>Оставьте контактные данные и мы свяжемся с вами в ближайшее время</p>
+							</div>
+							<div class="form-body">
+								<div class="form-row">
+									<div class="form-item col-4">
+										<label for="field-mail" class="form-label">Адрес почты или номер телефона</label>
+									</div>
+									<div class="form-item col-7">
+										<input type="text" id="field-mail" class="form-field form-field--input">
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="form-item col-4">
+										<label for="field-mail" class="form-label">Имя</label>
+									</div>
+									<div class="form-item col-7">
+										<input type="text" id="field-mail" class="form-field form-field--input">
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="form-item col-4"></div>
+									<div class="form-item col-6">
+										<button type="submit" class="btn btn-medium btn-action">Заказать услугу</button>
+									</div>
+								</div>
+							</div>
+							<div hidden class="form-success">
+								<div class="form-content align-center">
+									<img src="tpl/assets/services/success.png" width="47" height="58">
+									<h2 class="form-content__title">Заявка отправлена</h2>
+									<p>В ближайшее время с вами свяжутся по указанным контактным данным.</p>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="about-layout">
+					<div class="container">
+						<div class="about-cover">
+							<img src="tpl/assets/about-julia.png" width="296" height="534">
+						</div>
+						<div class="about-content">
+							<h1 class="about-content__title">Юлия Верма — ваш проводник в мир правильного шопинга и стильных вещей!</h1>
+							<div class="about-content__columns">
+								<div class="col-6 about-content__text">
+									<p>Сертифицированный специалист в области персонального шопинга и имидж-консалтинга, автор и ведущая вебинаров и статей о моде и стиле.</p>
+								</div>
+								<div class="col-6 about-content__text">
+									<p>На счету более 200 преображений и благодарных клиентов, создание имиджа музыкальных коллективов. Приглашенный стилист промо-акций салонов красоты.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="services-layout">
+					<div class="container">
+						<div class="section-header">
+							<h3 class="section-header__title">Услуги стилиста</h3>
+							<div class="section-header__text">
+								<p>Каждый созданный образ отражает индивидуальные качества человека</p>
+							</div>
+						</div>
+						<div class="servicest-list">
+							<a href="/services-page.html" class="services-item">
+								<div class="services-item__block services-item__image">
+									<img src="tpl/assets/services/s-1.jpg" width="600" height="360">
+								</div>
+								<div class="services-item__block services-item__content">
+									<div class="services-item__icon">
+										<img src="tpl/assets/services/icon-1.png">
+									</div>
+									<div class="services-item__header">
+										<h4 class="services-item__title">Шопинг со стилистом</h4>
+										<p>Идеальный инструмент для создания уникального образа</p>
+									</div>
+									<div class="services-item__text">
+										<ul>
+											<li>Консультация стилиста</li>
+											<li>Разбор вашего типа фигуры</li>
+											<li>Имиджевая проработка вашего стиля</li>
+											<li>Предшоппинг</li>
+											<li>Шопинг</li>
+										</ul>
+									</div>
+									<div class="services-item__footer">
+										<span class="link-pseudo">Подробнее</span>
+									</div>
+								</div>
+							</a>
+							<a href="/services-page-2.html" class="services-item">
+								<div class="services-item__block services-item__image">
+									<img src="tpl/assets/services/s-2.jpg" width="600" height="360">
+								</div>
+								<div class="services-item__block services-item__content">
+									<div class="services-item__icon">
+										<img src="tpl/assets/services/icon-2.png">
+									</div>
+									<div class="services-item__header">
+										<h4 class="services-item__title">Анализ гардероба</h4>
+										<p>Профессиональный взгляд стилиста на ваши вещи</p>
+									</div>
+									<div class="services-item__text">
+										<ul>
+											<li>Консультация стилиста</li>
+											<li>Разбор вашего типа фигуры</li>
+											<li>Составляем удачные комплекты</li>
+											<li>Фотографируем комплекты для вас</li>
+										</ul>
+									</div>
+									<div class="services-item__footer">
+										<span class="link-pseudo">Подробнее</span>
+									</div>
+								</div>
+							</a>
+							<a href="#" class="services-item">
+								<div class="services-item__block services-item__image">
+									<img src="tpl/assets/services/s-3.jpg" width="600" height="360">
+								</div>
+								<div class="services-item__block services-item__content">
+									<div class="services-item__icon">
+										<img src="tpl/assets/services/icon-3.png">
+									</div>
+									<div class="services-item__header">
+										<h4 class="services-item__title">Индивидуальный шопинг</h4>
+										<p>Идеальный инструмент для создания уникального образа</p>
+									</div>
+									<div class="services-item__text">
+										<ul>
+											<li>Консультация стилиста</li>
+											<li>Разбор вашего типа фигуры</li>
+											<li>Имиджевая проработка вашего стиля</li>
+											<li>Предшоппинг</li>
+											<li>Шопинг</li>
+										</ul>
+									</div>
+									<div class="services-item__footer">
+										<span class="link-pseudo">Подробнее</span>
+									</div>
+								</div>
+							</a>
+							<a href="/services-page-card.html" class="services-item">
+								<div class="services-item__block services-item__image">
+									<img src="tpl/assets/services/s-4.jpg" width="600" height="360">
+								</div>
+								<div class="services-item__block services-item__content">
+									<div class="services-item__icon">
+										<img src="tpl/assets/services/icon-4.png">
+									</div>
+									<div class="services-item__header">
+										<h4 class="services-item__title">Подарочные сертификаты</h4>
+										<p>Лучший подарок близкому человеку!</p>
+									</div>
+									<div class="services-item__text">
+										<p>Подарочный сертификат на услуги стилиста может стать оригинальным, ярким и по-настоящему полезным подарком для Вашей девушки, любимой мамы, лучшей подруги или сестры.</p>
+									</div>
+									<div class="services-item__footer">
+										<span class="link-pseudo">Подробнее</span>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div tabindex="-1" role="dialog" aria-hidden="true" id="callback" class="modal fade">
+			<div class="modal-dialog">
+				<div class="modal-body">
+					<button data-dismiss="modal" aria-label="Close" class="btn btn-modal-close">×</button>
+					<form class="form-section">
+						<div class="form-layout">
+							<div class="form-content">
+								<h2 class="form-content__title">Заказать услуги стилиста</h2>
+								<p>Оставьте контактные данные и мы свяжемся с вами в ближайшее время</p>
+							</div>
+							<div class="form-body">
+								<div class="form-row">
+									<div class="form-item col-4">
+										<label for="field-mail" class="form-label">Адрес почты или номер телефона</label>
+									</div>
+									<div class="form-item col-7">
+										<input type="text" id="field-mail" class="form-field form-field--input">
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="form-item col-4">
+										<label for="field-mail" class="form-label">Имя</label>
+									</div>
+									<div class="form-item col-7">
+										<input type="text" id="field-mail" class="form-field form-field--input">
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="form-item col-4"></div>
+									<div class="form-item col-6">
+										<button type="submit" class="btn btn-medium btn-action">Заказать услугу</button>
+									</div>
+								</div>
+							</div>
+							<div hidden class="form-success">
+								<div class="form-content align-center">
+									<img src="tpl/assets/services/success.png" width="47" height="58">
+									<h2 class="form-content__title">Заявка отправлена</h2>
+									<p>В ближайшее время с вами свяжутся по указанным контактным данным.</p>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<footer class="row footer-row">
+			<div class="footer-panel">
+				<div class="container">
+					<ul class="menu-primary footer-nav">
+						<li class="menu-primary__item">
+							<a href="/">Услуги стилиста</a>
+						</li>
+						<li class="menu-primary__item">
+							<a href="/">Отзывы</a>
+						</li>
+						<li class="menu-primary__item">
+							<a href="/">Портфолио</a>
+						</li>
+						<li class="menu-primary__item">
+							<a href="/">Блог</a>
+						</li>
+						<li class="menu-primary__item">
+							<a href="/">Твори добро</a>
+						</li>
+					</ul>
+					<div class="footer-social">
+						<a href="#" class="social-icon icon-fb"></a>
+						<a href="#" class="social-icon icon-vk"></a>
+						<a href="#" class="social-icon icon-inst"></a>
+					</div>
+					<div class="footer-contacts">
+						<div class="footer-phone">
+							<a href="tel:+79854365002">+ 7 985 436-50-02</a>
+						</div>
+						<div class="footer-mail">
+							<a href="mailto:mail@vermastylist.ru">mail@vermastylist.ru</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="grid-layout">
+					<div class="col-6 footer-copyright">© Юлия Верма, 2014-2015</div>
+					<div class="col-6 nps-block">
+						<a href="http://nopreset.ru" class="nps-link">Создание сайта &mdash; nopreset</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+
+</html>

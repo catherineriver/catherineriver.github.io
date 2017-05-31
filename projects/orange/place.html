@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+		<title>Colin’s</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width">
+		<link sizes="57x57" href="tpl/images/ico/apple-touch-icon-57x57.png" rel="apple-touch-icon">
+		<link sizes="114x114" href="tpl/images/ico/apple-touch-icon-114x114.png" rel="apple-touch-icon">
+		<link sizes="72x72" href="tpl/images/ico/apple-touch-icon-72x72.png" rel="apple-touch-icon">
+		<link sizes="144x144" href="tpl/images/ico/apple-touch-icon-144x144.png" rel="apple-touch-icon">
+		<link sizes="60x60" href="tpl/images/ico/apple-touch-icon-60x60.png" rel="apple-touch-icon">
+		<link sizes="120x120" href="tpl/images/ico/apple-touch-icon-120x120.png" rel="apple-touch-icon">
+		<link sizes="76x76" href="tpl/images/ico/apple-touch-icon-76x76.png" rel="apple-touch-icon">
+		<link sizes="152x152" href="tpl/images/ico/apple-touch-icon-152x152.png" rel="apple-touch-icon">
+		<link sizes="180x180" href="tpl/images/ico/apple-touch-icon-180x180.png" rel="apple-touch-icon">
+		<link sizes="16x16 32x32 64x64" href="tpl/images/ico/favicon.png" type="image/png" rel="icon">
+		<!--[if IE]><link href="tpl/images/ico/favicon.ico" rel="shortcut icon"><![endif]-->
+		<script src="https://use.typekit.net/aio7fpe.js"></script>
+		<script>
+			try{Typekit.load({ async: true });}catch(e){}
+		</script>
+		<link href="tpl/template_styles.css" rel="stylesheet">
+		<script src="tpl/js/vendor/modernizr.js"></script>
+		<script src="http://api-maps.yandex.ru/2.1.17/?lang=ru_RU" type="text/javascript"></script>
+		<script>
+			window.jQuery || document.write('<script src="tpl/js/vendor/jquery-1.11.3.min.js"><\/script>')
+		</script>
+		<script src="tpl/js/lib.min.js"></script>
+		<script src="tpl/js/main.js"></script>
+	</head>
+
+	<body>
+		<header class="row-header">
+			<div class="header-topline">
+				<div class="container">
+					<div class="columns-root">
+						<div class="col-4">
+							<span class="workhours-label">c 9:00 до 21:00</span>
+						</div>
+						<div class="col-4">
+							<div class="header-social">
+								<a href="http://vk.com" class="icon-social vk"></a>
+								<a href="http://odnoklassniki.ru" class="icon-social ok"></a>
+								<a href="http://instagram.com" class="icon-social instagram"></a>
+							</div>
+						</div>
+						<div class="col-4 align-right">
+							<button data-toggle="modal" data-target="#reservation" class="btn btn-link btn-link--reserve">Шопинг-сопровождение</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="header-main">
+					<div class="header-logo">
+						<a title="На главную" href="/" class="site-logo">ТЦ Оранж</a>
+					</div>
+					<button type="button" class="btn-mobile js-toggle-menu">
+						<div class="btn-mobile__controll"></div>
+					</button>
+					<div class="header-nav">
+						<ul class="menu-secondary">
+							<li class="menu-secondary__item">
+								<a href="">Газета Citrus</a>
+							</li>
+							<li class="menu-secondary__item">
+								<a href="/">Билетные кассы</a>
+							</li>
+							<li class="menu-secondary__item">
+								<a href="/">Детям и родителям</a>
+							</li>
+							<li class="menu-secondary__item">
+								<a href="/">Схема ТЦ</a>
+							</li>
+							<li class="menu-secondary__item">
+								<a href="contacts.html">О ТЦ</a>
+							</li>
+						</ul>
+						<ul class="menu-primary">
+							<li class="menu-primary__item">
+								<a href="place.html">Магазины</a>
+							</li>
+							<li class="menu-primary__item">
+								<a href="rent.html">Рестораны и кафе</a>
+							</li>
+							<li class="menu-primary__item">
+								<a href="tickets.html">Спецпредложения</a>
+							</li>
+							<li class="menu-primary__item">
+								<a href="blog.html">Модный блог</a>
+							</li>
+							<li class="menu-primary__item">
+								<a href="contacts.html">Cобытия</a>
+							</li>
+							<li class="menu-primary__item">
+								<a href="contacts.html">Как добраться</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="header-dropdown">
+					<div class="header-dropdown__nav">
+						<ul class="menu-primary">
+							<li class="menu-primary__item">
+								<a href="/">Магазины</a>
+							</li>
+							<li class="menu-primary__item">
+								<a href="/">Рестораны и кафе</a>
+							</li>
+							<li class="menu-primary__item">
+								<a href="/">Спецпредложения</a>
+							</li>
+							<li class="menu-primary__item">
+								<a href="/">Модный блог</a>
+							</li>
+							<li class="menu-primary__item">
+								<a href="contacts.html">Cобытия</a>
+							</li>
+							<li class="menu-primary__item">
+								<a href="contacts.html">Как добраться</a>
+							</li>
+						</ul>
+						<ul class="menu-secondary">
+							<li class="menu-secondary__item">
+								<a href="/">Газета Citrus</a>
+							</li>
+							<li class="menu-secondary__item">
+								<a href="/">Билетные кассы</a>
+							</li>
+							<li class="menu-secondary__item">
+								<a href="/">Детям и родителям</a>
+							</li>
+							<li class="menu-secondary__item">
+								<a href="/">Схема ТЦ</a>
+							</li>
+							<li class="menu-secondary__item">
+								<a href="contacts.html">О ТЦ</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="page-layout">
+			<div class="row">
+				<div class="container">
+					<div class="page-content">
+						<div class="content-wrapper">
+							<div class="content-extra content-extra--right">
+								<div class="shop-details">
+									<div class="shop-details__image">
+										<img src="tpl/assets/shop/colins-lg.png" width="200" height="52">
+									</div>
+									<div class="shop-meta">
+										<div class="shop-meta__row">
+											<div class="shop-meta__item col-6 col-sm-12">
+												<span class="workhours-label">c 9:00 до 21:00</span>
+											</div>
+											<div class="shop-meta__item col-6 col-sm-12">
+												<a href="tel:+78453350978">+7 (8453) 35-09-78</a>
+											</div>
+										</div>
+										<div class="shop-meta__row">
+											<div class="shop-meta__item col-6 col-sm-12">
+												<a href="http://colins.ru">www.colins.ru</a>
+											</div>
+											<div class="shop-meta__item col-6 col-sm-12">
+												<a href="scheme.html">Показать на схеме</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="content-wrapper__col content-wrapper__col--right">
+								<div class="content-main content-main--right has-video">
+									<article class="article-layout">
+										<div class="content-main__header">
+											<h1 class="content-main__title">Colin’s</h1>
+										</div>
+										<div class="article-body">
+											<p>Торговая марка Colin’s, созданная в 1983 году в Турции, принадлежит группе компаний Eroglu.</p>
+											<p>Широкий ассортимент модной повседневной одежды, аксессуаров и обуви для мужчин и женщин. Каждый сезон дизайнеры компании разрабатывают более 2000 моделей новой коллекции, которые отвечают самым современным тенденциям мировой моды.</p>
+											<span
+											data-action="expand" class="link-pseudo">Показать текст</span>
+												<div hidden class="hidden-text">
+													<p>Полный цикл от производства джинсовой ткани, разработки и пошива моделей на собственных фабриках, до продажи готовой продукции в сети монобрендовых магазинов. В изготовлении джинсовых изделий применяются самые передовые технологии обработки
+														и варки. В производстве одежды COLIN’S используются только экологически чистые материалы.</p>
+													<p>Узнаваемый всеми бренд, занимающий достойное место в сердцах покупателей в Европе и Азии. На сегодняшний день одежда COLIN’S представлена в 670 фирменных магазинах в 32 странах мира. Colin’s является одной из наиболее динамично развивающихся
+														марок на мировом рынке готовой одежды.</p>
+												</div>
+										</div>
+										<div class="article-embed">
+											<iframe width="1280" height="720" src="https://www.youtube.com/embed/qkC_mSIeZ68?rel=0&amp;amp;controls=0&amp;amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+										</div>
+									</article>
+								</div>
+								<div class="shop-special columns-root">
+									<div class="col-12">
+										<a href="#" class="card">
+											<div class="card__header">
+												<h3 class="card__header-title">Компания O'STIN начала свою деятельность в России в 2003 г.</h3>
+											</div>
+											<div class="card__content">
+												<p>Розничная сеть магазинов, предлагающих мужскую, женскую и молодежную одежду и&nbsp;аксессуары в стиле casual.</p>
+											</div>
+											<span class="date-event">C 17 по 21 декабря</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="gallery-section">
+					<div class="container">
+						<div class="carousel-wrap">
+							<div class="carousel-wrap__title">7
+								<span class="small">фотографий</span>
+							</div>
+							<div class="carousel-wrap__content">
+								<div class="owl-carousel">
+									<div class="item">
+										<img src="tpl/assets/shop/carousel-0.jpg">
+									</div>
+									<div class="item">
+										<img src="tpl/assets/shop/carousel-1.jpg">
+									</div>
+									<div class="item">
+										<img src="tpl/assets/shop/carousel-2.jpg">
+									</div>
+									<div class="item">
+										<img src="tpl/assets/shop/carousel-0.jpg">
+									</div>
+									<div class="item">
+										<img src="tpl/assets/shop/carousel-1.jpg">
+									</div>
+									<div class="item">
+										<img src="tpl/assets/shop/carousel-2.jpg">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="section-panel">
+					<div class="section-panel__header theme-default">
+						<div class="container">
+							<div class="section-panel__title">Другие магазины</div>
+						</div>
+					</div>
+					<div class="section-panel__content">
+						<div class="container">
+							<div class="catalog-content">
+								<div class="catalog-cards columns-root">
+									<div class="col-12 col-sm-4">
+										<a href="#" class="card card-shop">
+											<div class="card__logo">
+												<img src="tpl/assets/shop/ostin-lg.png">
+											</div>
+											<div class="card__header">
+												<div class="card__header-meta">Одежда</div>
+												<div class="card__header-title">Ostin</div>
+											</div>
+										</a>
+									</div>
+									<div class="col-12 col-sm-4">
+										<a href="#" class="card card-shop">
+											<div class="card__logo">
+												<img src="tpl/assets/shop/ostin-lg.png">
+											</div>
+											<div class="card__header">
+												<div class="card__header-meta">Одежда</div>
+												<div class="card__header-title">Ostin</div>
+											</div>
+										</a>
+									</div>
+									<div class="col-12 col-sm-4">
+										<a href="#" class="card card-shop">
+											<div class="card__logo">
+												<img src="tpl/assets/shop/ostin-lg.png">
+											</div>
+											<div class="card__header">
+												<div class="card__header-meta">Одежда</div>
+												<div class="card__header-title">Ostin</div>
+											</div>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div tabindex="-1" role="dialog" aria-hidden="true" id="reservation" class="modal fade">
+			<div class="modal-dialog reservation-layout">
+				<button data-dismiss="modal" aria-label="Close" class="btn btn-modal-close">×</button>
+				<div class="reservation-modal">
+					<div class="page-header">
+						<h2 class="page-header__title">шоппинг сопровождение</h2>
+						<div class="page-header__subtitle">В удобное для вас время</div>
+					</div>
+					<div class="reservation-content">
+						<div class="form-layout col-10">
+							<form class="form-body">
+								<div class="form-row">
+									<div class="form-item col-4">
+										<label for="form-name" class="form-label">Ваше имя</label>
+									</div>
+									<div class="form-item col-7">
+										<input placeholder="Введите имя" id="form-name" class="form-field form-field--input has-error">
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="form-item col-4">
+										<label for="form-phone" class="form-label">Телефон</label>
+									</div>
+									<div class="form-item col-7">
+										<input value="+7" id="form-phone" class="form-field form-field--input">
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="form-item col-4">
+										<label class="form-label">Удобное время</label>
+									</div>
+									<div class="form-item col-8">
+										<div class="setDate">
+											<input type="text" id="mytarget" value="Выберите дату" readonly class="form-field form-field--input js-date-target">
+											<div id="mycalendar2" class="monthly"></div>
+										</div>
+										<div class="selectbox">
+											<select class="js-select">
+												<option>в 12:00</option>
+												<option>в 12:30</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="form-item col-4">
+										<label for="form-text" class="form-label">Немного о себе</label>
+									</div>
+									<div class="form-item col-8">
+										<textarea rows="2" placeholder="Введите текст" id="form-text" class="form-field form-field--textarea"></textarea>
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="form-item col-4"></div>
+									<div class="form-item col-8">
+										<button type="submit" class="btn btn-submit btn-action">Записаться</button>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div hidden class="form-success">
+							<div class="form-success__message">Заявка отправлена</div>
+							<p>В ближайшее время с вами свяжется стилист и уточнит детали.</p>
+							<div class="form-success__action">
+								<button data-dismiss="modal" class="btn btn-basic btn-normal">Продолжить</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="row row-footer">
+			<div class="footer-main">
+				<div class="container">
+					<div class="columns-root">
+						<div class="col-9 footer-nav">
+							<ul class="menu-primary">
+								<li class="menu-primary__item">
+									<a href="/">Магазины</a>
+								</li>
+								<li class="menu-primary__item">
+									<a href="/">Рестораны и кафе</a>
+								</li>
+								<li class="menu-primary__item">
+									<a href="/">Спецпредложения</a>
+								</li>
+								<li class="menu-primary__item">
+									<a href="/">Модный блог</a>
+								</li>
+								<li class="menu-primary__item">
+									<a href="contacts.html">Cобытия</a>
+								</li>
+								<li class="menu-primary__item">
+									<a href="contacts.html">Как добраться</a>
+								</li>
+							</ul>
+							<ul class="menu-secondary">
+								<li class="menu-secondary__item">
+									<a href="/">Газета Citrus</a>
+								</li>
+								<li class="menu-secondary__item">
+									<a href="/">Билетные кассы</a>
+								</li>
+								<li class="menu-secondary__item">
+									<a href="/">Детям и родителям</a>
+								</li>
+								<li class="menu-secondary__item">
+									<a href="/">Схема ТЦ</a>
+								</li>
+								<li class="menu-secondary__item">
+									<a href="contacts.html">О ТЦ</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-3 footer-contacts">
+							<div class="footer-contacts__block">
+								<div class="footer-contacts__phone">
+									<a href="tel:+78453353833">+7 (8453) 35-38-33</a>
+								</div>
+								<div class="footer-contacts__workhours">c 9:00 до 21:00</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-panel">
+				<div class="container">
+					<div class="columns-root">
+						<div class="col-12 col-sm-6">
+							<div class="footer-copyright">© Торговый центр «Оранж», 2014-2015</div>
+						</div>
+						<div class="col-12 col-sm-6">
+							<div class="footer-developers">
+								<a href="http://nopreset.ru" class="footer-developers__link">Создание сайта &mdash; nopreset</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+
+</html>
