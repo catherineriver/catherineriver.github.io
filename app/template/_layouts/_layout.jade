@@ -2,15 +2,9 @@ doctype html
 html(lang='ru')
 	- var dir = ""
 	block vars
-	include ../_includes/_head
-	include ../_includes/_mixins
-
+	include ../_includes/head
+	include ../_includes/mixins
 
 	body(class=bodyClass)
 
 		block content
-
-		if !footer
-			include ../_includes/_footer
-
-		include ../_includes/_modal

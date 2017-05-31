@@ -1,0 +1,170 @@
+.article-layout {
+  font-size: $font-size-root;
+  line-height: 30px;
+}
+
+.article-body {
+  p {
+    margin: 0.8em 0;
+    font-size: 18px;
+    @media $mobile {
+      font-size: inherit;
+      line-height: 35px;
+    }
+  }
+  ul {
+    margin-top: 1em;
+    padding: 0 0 0 20px;
+    list-style: disc outside;
+
+    li + li {
+      margin-top: 0.7em;
+    }
+  }
+  ol {
+    margin-top: 1em;
+    padding: 0 0 0 20px;
+    list-style-type: decimal;
+
+    li + li {
+      margin-top: 0.7em;
+    }
+  }
+  figure {
+    margin: 0;
+    padding: 2.5em 0 1.7em;
+
+    img {
+      margin: 0 0 0.5em;
+    }
+  }
+  figcaption {
+    font-style: italic;
+    font-size: 0.85em;
+  }
+  img {
+    margin: 2.5em 0 1.5em;
+    max-width: 100%;
+  }
+  blockquote {
+    margin-left: 0;
+    padding: 0 0 0 20px;
+    border-left: 4px solid #dedede;
+    font-weight: 300;
+    font-size: 21px;
+    line-height: 1.48;
+  }
+  strong,
+  b {
+    font-weight: bolder;
+  }
+  h3,
+  h4,
+  h5 {
+    margin: 52px 0 0;
+    line-height: 1.25;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+.article-header {
+  margin-bottom: 18px;
+
+  &__title {
+    margin-bottom: 4px;
+    font-size: 42px;
+  }
+  &__date {
+    color: #555;
+    font-style: italic;
+    font-size: 14px;
+  }
+}
+
+.pagination {
+  position: relative;
+}
+
+.pagination__list {
+  text-align: center;
+  font-size: 0;
+  user-select: none;
+
+  li {
+    display: inline-block;
+    font-size: $font-size-root;
+  }
+  a {
+    padding: 14px;
+  }
+  span {
+    cursor: default;
+  }
+  .active a {
+    cursor: default;
+    pointer-events: none;
+  }
+}
+
+.pagination__controls {
+  position: absolute;
+  right: 0;
+  left: 0;
+  font-size: $font-size-root;
+}
+
+.pagination__control {
+  position: absolute;
+
+  &--left {
+    left: 0;
+  }
+  &--right {
+    right: 0;
+  }
+}
+
+.content-siblings {
+  position: relative;
+}
+
+.content-sibling__arrow {
+  width: 40%;
+
+  a {
+    color: inherit;
+  }
+  a::before {
+    position: absolute;
+  }
+}
+
+.content-sibling__arrow-next {
+  float: right;
+  text-align: right;
+
+  &::after {
+    left: 100%;
+    content: "→";
+  }
+}
+
+.content-sibling__arrow-prev {
+  float: left;
+
+  &::before {
+    right: 100%;
+    content: "←";
+  }
+}
+
+.breadcrumbs {
+  font-size: 0;
+}
+
+.breadcrumbs li {
+  display: inline-block;
+}

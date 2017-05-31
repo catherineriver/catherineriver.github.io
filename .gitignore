@@ -20,4 +20,4 @@ bower_components
 
 # Node.JS
 node_modules/*
-!node_modules/jade-inheritance
+dist/*

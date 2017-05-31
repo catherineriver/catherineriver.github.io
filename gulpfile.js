@@ -1,28 +1,30 @@
-var gulp 			= require('gulp'),
-	browsersync		= require('browser-sync'),
-	notify 			= require("gulp-notify"),
-	plumber 		= require('gulp-plumber'),
+var gulp 						= require('gulp'),
+	browsersync				= require('browser-sync'),
+	notify 						= require('gulp-notify'),
+	plumber 					= require('gulp-plumber'),
 
-	sass        	= require('gulp-sass'),
-	minifyCss 		= require('gulp-minify-css'),
-	csslint 		= require('gulp-csslint'),
+	postcss						= require('gulp-postcss'),
+	autoprefixer			= require('autoprefixer'),
+	stylelint 				= require('gulp-stylelint'),
+	cssnano 					= require('cssnano'),
+	cssimport 				= require('postcss-import'),
+	cssnested 				= require('postcss-nested'),
+	cssvar		 				= require('postcss-simple-vars'),
 
-	jade 			= require('gulp-jade'),
-	jadeInheritance = require('gulp-jade-inheritance'),
-	changed 		= require('gulp-changed'),
-	cached 			= require('gulp-cached'),
-	filter 			= require('gulp-filter'),
-	prettify 		= require('gulp-html-prettify'),
+	jade 							= require('gulp-jade'),
+	jadeInheritance 	= require('gulp-jade-inheritance'),
+	changed 					= require('gulp-changed'),
+	cached 						= require('gulp-cached'),
+	filter 						= require('gulp-filter'),
+	prettify 					= require('gulp-html-prettify'),
 
-	concat 			= require('gulp-concat'),
-	uglify 			= require('gulp-uglify'),
-	rename 			= require("gulp-rename"),
-	spritesmith		= require('gulp.spritesmith'),
-	autoprefixer	= require('gulp-autoprefixer'),
-	runSequence		= require('run-sequence'),
+	clean 						= require('gulp-clean'),
+	concat 						= require('gulp-concat'),
+	uglify 						= require('gulp-uglify'),
+	rename 						= require('gulp-rename'),
+	runSequence				= require('run-sequence'),
 
-	browsersList	= ['ie 8', 'last 2 versions'],
-	reload 			= browsersync.reload;
+	reload 						= browsersync.reload;
 
 	var configPrettify = {
 		indent_char: '\t',
@@ -35,14 +37,6 @@ var gulp 			= require('gulp'),
 		errorHandler: notify.onError("\n<%= error.message %>")
 	};
 
-	var customReporter = function(file) {
-		gutil.log(gutil.colors.cyan(file.csslint.errorCount)+' errors in '+gutil.colors.magenta(file.path));
-
-		file.csslint.results.forEach(function(result) {
-			gutil.log(result.error.message+' on line '+result.error.line);
-		});
-	};
-
 	var app = {
 		jade: 'app/template/'
 	};
@@ -52,104 +46,81 @@ var gulp 			= require('gulp'),
 	};
 
 
-
-// jade
-// ---------------------------------------------------------------------------------
-
 gulp.task('jade', function() {
 	return gulp.src([app.jade + '/**/*.jade'])
-	.pipe(plumber(configPlumber))
-	.pipe(changed('dist', {extension: '.html'}))
-	.pipe(cached('jade'))
-	.pipe(jadeInheritance({basedir: 'app/template'}))
-	 .pipe(filter(function (file) {
-	            return !/\/_/.test(file.path) && !/^_/.test(file.relative);
-	        }))
-	.pipe(jade())
-	.pipe(prettify(configPrettify))
-	.pipe(gulp.dest('dist'))
-});
-
-
-
-// sass
-// ---------------------------------------------------------------------------------
-
-gulp.task('sass', function () {
-	gulp.src('./app/scss/main.scss')
 		.pipe(plumber(configPlumber))
-			.pipe(sass())
-			.pipe(autoprefixer({browsers: browsersList}))
-			.pipe(minifyCss({
-				advanced: true,
-				restructuring: false,
-				keepBreaks: true,
-			}))
-			.pipe(rename('template_styles.css'))
-		.pipe(gulp.dest('dist/tpl'))
-		.pipe(reload({stream:true}));
-})
-
-gulp.task('csslint', function() {
-  gulp.src(dist.css)
-    .pipe(csslint('.csslintrc.json'))
-    .pipe(csslint.reporter(customReporter));
+		// .pipe(changed('dist', {extension: '.html'}))
+		.pipe(cached('jade'))
+		.pipe(jadeInheritance({basedir: 'app/template'}))
+		.pipe(filter(function (file) {
+			return !/\/_/.test(file.path) && !/^_/.test(file.relative);
+		}))
+		.pipe(jade())
+		.pipe(prettify(configPrettify))
+		.pipe(gulp.dest('dist'))
 });
 
 
+gulp.task('css', function () {
+  var processors = [
+		cssimport(),
+		cssvar(),
+		cssnested(),
+    autoprefixer({browsers: ['ie 10', 'last 2 versions']}),
+    cssnano({convertValues: {length: false}}),
+  ];
+  return gulp.src('./app/styles/main.css')
+		.pipe(plumber(configPlumber))
+    .pipe(postcss(processors))
+		.pipe(rename('template_styles.css'))
+    .pipe(gulp.dest('./dist/tpl'))
+		.pipe(reload({stream:true}));
+});
 
-// js
-// ---------------------------------------------------------------------------------
+
+gulp.task('lintcss', function lintCssTask() {
+   gulp.src('./app/styles/**/*.css')
+    .pipe(stylelint({
+      reporters: [ { formatter: 'string', console: true } ]
+    }));
+});
+
 
 gulp.task('js', function() {
-    gulp.src(['app/js/**/*.js'])
-        .pipe(concat('lib.min.js'))
-		.pipe(uglify())
-        .pipe(gulp.dest('dist/tpl/js'))
-		.pipe(reload({stream:true}));
+  gulp.src(['app/js/**/*.js'])
+    .pipe(concat('lib.min.js'))
+	.pipe(uglify())
+    .pipe(gulp.dest('dist/tpl/js'))
+	.pipe(reload({stream:true}));
 })
 
-
-
-// sprite
-// ---------------------------------------------------------------------------------
-gulp.task('sprite', function () {
-	var spriteData = gulp.src('app/images/**/*.png').pipe(spritesmith({
-		retinaSrcFilter: ['app/images/**/*@2x.png'],
-		imgName: 'images/sprite.png',
-		retinaImgName: 'images/sprite@2x.png',
-		cssName: '_sprite.scss',
-		cssTemplate: 'app/scss/handlebarsStr.scss.hb'
-	}))
-
-	spriteData.img
-		.pipe(gulp.dest('dist/tpl'));
-
-	spriteData.css
-		.pipe(gulp.dest('app/scss/utils'));
+gulp.task('clean', function() {
+	return gulp.src('dist', {read: false})
+	.pipe(clean());
 });
 
+gulp.task('copy', function() {
+	gulp.src('./app/static/**')
+		.pipe(gulp.dest('dist/tpl'))
+});
 
-// defaut task
-// ---------------------------------------------------------------------------------
-gulp.task('default', ['jade', 'sprite', 'sass', 'js' ], function () {
+gulp.task('default', ['jade', 'css', 'js', 'copy' ], function () {
 
 	browsersync({
 		server: {
 			baseDir: "dist",
 			directory: true
-		}
+		},
+		open: false
 	});
 
-	gulp.watch(["app/scss/**/*.+(scss|sass)"], ['sass']);
+	gulp.watch(["app/styles/**/*.css"], ['css']);
 
-	gulp.watch(["app/template/**/*.jade", "app/template/**/*.svg"], function(){
-		runSequence('jade', reload)});
+	gulp.watch(["app/template/**/*.jade", "app/template/**/*.svg"], function(){ runSequence('jade', reload)});
 
-	gulp.watch(["app/js/**/*.js", "dist/tpl/js/**/*.js", "!dist/tpl/js/lib.min.js"], ['js']);
+	gulp.watch(["app/js/**/*.js"], ['js']);
 
-	gulp.watch("app/images/*.png", ['sprite']);
-
+	gulp.watch("app/static/**/*", function() { runSequence('copy', reload) });
 });
 
-gulp.task('build', ['jade', 'sprite', 'sass', 'js' ])
+gulp.task('build', ['clean', 'jade', 'css', 'js' ])
