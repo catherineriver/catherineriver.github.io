@@ -554,9 +554,6 @@ a:hover .icons::after {
 }
 
 @media only screen and (min-width:512px) {
-  .icons--high {
-    padding: 120px;
-  }
   .icons__item {
     display: block;
     margin: 0 20px
