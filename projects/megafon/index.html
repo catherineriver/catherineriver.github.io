@@ -1,0 +1,39 @@
+<!DOCTYPE html><html lang=en><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><title>cmtt-special-vue-template</title><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700&display=swap"><link href=/special-reaction-test/css/app.11160b71.css rel=preload as=style><link href=/special-reaction-test/js/app.1ad267af.js rel=preload as=script><link href=/special-reaction-test/css/app.11160b71.css rel=stylesheet></head><body><style>body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }</style><noscript><strong>We're sorry but cmtt-special-vue-template doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id=special></div><script defer>(function(d, ver) {
+        var onload = function (container, isProduction = false) {
+          const params = {
+            container: container,
+            location: 'page', // index, feed, article, page
+          };
+
+          if (isProduction) {
+            params.css = './all.css?' + ver;
+          }
+
+          new MegafonOkkla.Special(params);
+        };
+
+        var container = d.getElementById('special');
+
+        if (container) {
+          d.addEventListener('DOMContentLoaded', function () {
+            if (typeof MegafonOkkla === 'undefined') {
+              var s = d.createElement('script');
+
+              s.src = './all.js?' + ver;
+              s.async = true;
+
+              s.onload = function () {
+                onload(container, true);
+              };
+
+              d.body.appendChild(s);
+            } else {
+              onload(container);
+            }
+          });
+        }
+      })(document, 0);</script><script src=/special-reaction-test/js/app.1ad267af.js></script></body></html>
